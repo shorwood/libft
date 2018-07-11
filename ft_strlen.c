@@ -6,19 +6,19 @@
 /*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/05 15:12:37 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/06 16:42:59 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/11 18:06:33 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_strlen(char *string)
+int		ft_strlen(char *str)
 {
 	int i;
 
 	i = 0;
-	while (string[i])
+	while (*str)
 	{
-		i++;
+		str++;
 	}
 	return (i);
 }
