@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/06 14:53:33 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/07 00:26:26 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/11 18:01:17 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,10 +16,11 @@
 
 int		main(void)
 {
-	int array[1][1][1][1][1][1][1][1][1];
+	int a = 0;
+	int b = 1;
 
-	ft_ultimate_ft(array);
-
-	printf("%d", array[0][0][0][0][0][0][0][0][0]);
+	printf("%d-%d\n", a, b);
+	ft_swap(&a, &b);
+	printf("%d-%d\n", a, b);
 	return (0);
 }
