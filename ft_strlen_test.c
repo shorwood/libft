@@ -6,24 +6,25 @@
 /*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/06 14:53:49 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/07 00:30:40 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/11 18:06:03 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 #include "ft_strlen.c"
 
 int		main(void)
 {
-    char string0[] = "";
-    char string4[] = "0123";
-    char string8[] = "01234567";
-    char string12[] = "012345678901";
+    char str0[] = "";
+    char str1[] = "0123";
+    char str2[] = "01234567";
+    char str3[] = "012345678901";
 
-    printf("%d\n", ft_strlen(string0));
-    printf("%d\n", ft_strlen(string4));
-    printf("%d\n", ft_strlen(string8));
-    printf("%d\n", ft_strlen(string12));
+    printf("%s:\t\t\t\t%d\t%lu\n", str0, ft_strlen(str0), strlen(str0));
+    printf("%s:\t\t\t%d\t%lu\n", str1, ft_strlen(str1), strlen(str1));
+    printf("%s:\t\t%d\t%lu\n", str2, ft_strlen(str2), strlen(str2));
+    printf("%s:\t%d\t%lu\n", str3, ft_strlen(str3), strlen(str3));
 	return (0);
 }
