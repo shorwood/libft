@@ -6,16 +6,16 @@
 /*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/06 14:53:25 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/06 16:43:12 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/11 18:02:47 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 void	ft_swap(int *a, int *b)
 {
-	int		buffer;
+	int		c;
 
-	buffer = *a;
+	c = *a;
 	*a = *b;
-	*b = buffer;
+	*b = c;
 }
