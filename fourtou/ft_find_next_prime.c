@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_atoi.c                                        .::    .:/ .      .::   */
+/*   ft_find_next_prime.c                             .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/09 17:26:52 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/11 17:49:52 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/07 17:29:01 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/12 04:19:59 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_atoi(char *str)
-{
-	int		x;
-	int		s;
+int		ft_is_prime(int x);
 
-	x = 0;
-	s = 1;
-	while (*str == '\t' || *str == '\v' || *str == '\n'
-		|| *str == '\r' || *str == '\f' || *str == ' ')
-		str++;
-	if (*str == '+' || *str == '-')
-	{
-		s = *str == '-' ? -1 : 1;
-		str++;
-	}
-	while (*str >= '0' && *str <= '9')
-	{
-		x = x * 10 + *str - '0';
-		str++;
-	}
-	return (x * s);
+int		ft_find_next_prime(int x)
+{
+	if (x < 2)
+		return (2);
+	if (!(x % 2))
+		x++;
+	while (!ft_is_prime(x))
+		x += 2;
+	return (x);
 }

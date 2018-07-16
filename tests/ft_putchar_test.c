@@ -1,35 +1,22 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_find_next_prime.c                             .::    .:/ .      .::   */
+/*   ft_putchar_test.c                                .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/07 17:29:01 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/07 23:29:07 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/09 17:00:12 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/16 12:14:15 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_is_prime(int x)
-{
-	int		i;
+#include "../srcs/ft_putchar.c"
 
-	if (x < 2)
-		return (0);
-	i = 2;
-	while (i < x)
-	{
-		if (x % i == 0)
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
-int		ft_find_next_prime(int x)
+int		main(void)
 {
-	while (!ft_is_prime(x))
-		x++;
-	return (x);
+	ft_putchar('4');
+	ft_putchar('2');
+	ft_putchar('\n');
+	return (0);
 }

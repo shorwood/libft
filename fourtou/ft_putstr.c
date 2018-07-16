@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_ft_test.c                                     .::    .:/ .      .::   */
+/*   ft_putstr.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/06 14:53:28 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/06 15:00:08 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/06 14:53:46 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/15 23:24:56 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "ft_ft.c"
+void	ft_putchar(char c);
 
-int		main(void)
+void	ft_putstr(char *str)
 {
-    int array[1];
-	ft_ft(array);
-
-    printf("%d", *array);
-	return (0);
+	while (*str)
+		ft_putchar(*str++);
 }

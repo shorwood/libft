@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_ultimate_ft_test.c                            .::    .:/ .      .::   */
+/*   ft_putnbr.h                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/06 14:53:28 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/06 23:37:50 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/06 14:53:46 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/16 12:17:50 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "ft_ultimate_ft.c"
+#ifndef _FT_PUTNBR_H
+# define _FT_PUTNBR_H
 
-int		main(void)
-{
-	int array[1][1][1][1][1][1][1][1][1];
+void	ft_putnbr(int x);
 
-	ft_ultimate_ft(array);
-
-	printf("%d", array[0][0][0][0][0][0][0][0][0]);
-	return (0);
-}
+#endif

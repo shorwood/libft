@@ -1,17 +1,28 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_eight_queens_puzzle_2.c                         .::    .:/ .      .::   */
+/*   ft_is_prime_test.c                               .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/07 21:57:49 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/07 23:33:34 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/07 07:34:24 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/12 03:55:13 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_eight_queens_puzzle_2(void)
+#include <stdio.h>
+#include "ft_is_prime.c"
+
+int		main(void)
 {
+	int		i;
+
+	i = -1;
+	while (i <= 4096)
+	{
+		printf("%d: %d\n", i, ft_is_prime(i));
+		i++;
+	}
 	return (0);
 }

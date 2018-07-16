@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_is_prime_test.c                               .::    .:/ .      .::   */
+/*   ft_ft_test.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/07 07:34:24 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/07 08:01:36 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/06 14:53:28 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/12 04:12:32 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include "ft_is_prime.c"
 
 int		main(void)
 {
-	int		i;
+    int ptr[1];
+	ft_ft(ptr);
 
-	i = -1;
-	while (i <= 32)
-	{
-		printf("%d: %d\n", i, ft_is_prime(i));
-		i++;
-	}
+    printf("%d", *ptr);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/06 14:53:33 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/11 18:01:17 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/12 04:07:08 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,8 +16,8 @@
 
 int		main(void)
 {
-	int a = 0;
-	int b = 1;
+	int a = 2;
+	int b = 4;
 
 	printf("%d-%d\n", a, b);
 	ft_swap(&a, &b);
