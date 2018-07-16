@@ -6,12 +6,12 @@
 /*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/06 14:53:46 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/16 15:58:55 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/16 22:10:15 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "../includes/ft_putchar.h"
+#include "ft_putchar.h"
 
 void	ft_putstr(char *str)
 {

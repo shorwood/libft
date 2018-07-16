@@ -5,15 +5,15 @@
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/06 14:53:46 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/16 19:37:19 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/16 22:03:32 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/16 22:08:54 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char a)
+void	ft_putchar(char c)
 {
-	write(1, &a, 1);
+	write(1, &c, 1);
 }

@@ -1,0 +1,14 @@
+#--- Ignore everything.
+*
+!*/
+!.gitignore
+
+#--- Include tests & documentation.
+!*.md
+!*.pdf
+!*test.*
+
+#--- Include files to render.
+!inscludes/*
+!srcs/*
+!Makefile

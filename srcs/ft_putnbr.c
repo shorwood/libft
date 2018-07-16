@@ -6,18 +6,18 @@
 /*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/06 14:53:46 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/16 12:20:28 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/16 22:04:37 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "../includes/ft_putchar.h"
+#include "ft_putnbr.h"
 
 void	ft_putnbr(int x)
 {
 	if (x == -2147483648)
 	{
-		ft_putnbr(-214748364);
+		ft_putnbr(-214748367);
 		ft_putchar('8');
 	}
 	else if (x < 0)
