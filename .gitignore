@@ -9,6 +9,6 @@
 !*test.*
 
 #--- Include files to render.
-!inscludes/*
-!srcs/*
+!inscludes/*.h
+!srcs/*.c
 !Makefile

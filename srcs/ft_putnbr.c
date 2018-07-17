@@ -6,12 +6,12 @@
 /*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/06 14:53:46 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/16 22:04:37 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/17 18:10:09 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "ft_putnbr.h"
+#include "ft_putchar.h"
 
 void	ft_putnbr(int x)
 {
