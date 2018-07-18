@@ -3,10 +3,10 @@
 #                                                               /              #
 #    Makefile                                         .::    .:/ .      .::    #
 #                                                  +:+:+   +:    +:  +:+:+     #
-#    By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+      #
+#    By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/07/16 12:26:44 by shorwood     #+#   ##    ##    #+#        #
-#    Updated: 2018/07/17 19:11:14 by shorwood    ###    #+. /#+    ###.fr      #
+#    Updated: 2018/07/18 17:32:40 by shorwood    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -14,7 +14,7 @@
 #--- Initialize compilation/linkeage parameters.
 DSRC	= srcs
 DINC	= includes
-OUT		= ftlib.a
+OUT		= libft.a
 CC		= gcc
 CFLAGS	= -Wall -Werror -Wextra
 LC		= ar
