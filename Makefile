@@ -6,15 +6,15 @@
 #    By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/07/16 12:26:44 by shorwood     #+#   ##    ##    #+#        #
-#    Updated: 2018/07/18 17:32:40 by shorwood    ###    #+. /#+    ###.fr      #
+#    Updated: 2018/07/19 18:08:52 by shorwood    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
 
 #--- Initialize compilation/linkeage parameters.
+NAME	= libft.a
 DSRC	= srcs
 DINC	= includes
-OUT		= libft.a
 CC		= gcc
 CFLAGS	= -Wall -Werror -Wextra
 LC		= ar
@@ -27,10 +27,10 @@ SRC	= $(wildcard $(DSRC)/*.c $(DSRC)/*.cc)
 # **************************************************************************** #
 
 #--- Default instruction to make the library.
-deploy: $(OUT)
+deploy: $(NAME)
 	
 #--- Default instruction to make the library.
-all: $(OUT)
+all: $(NAME)
 
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ all: $(OUT)
 	@echo "- Translating $< to object"
 
 #--- Assemble static library. Depends on compiled object binary.
-$(OUT): $(SRC:%.c=%.o)
+$(NAME): $(SRC:%.c=%.o)
 	@$(LC) $(LFLAGS) $@ $^
 	@echo "- Library(ing) $@"
 
@@ -54,7 +54,9 @@ clean:
 	@echo "- Deleted objects$<"
 
 fclean: clean
-	@rm -f $(OUT)
+	@rm -f $(NAME)
 	@echo "- Deleted output"
 
 re: fclean all
+
+.PHONY: clean fclean all re
