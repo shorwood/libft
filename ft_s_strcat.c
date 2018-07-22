@@ -1,23 +1,42 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strin.c                                       .::    .:/ .      .::   */
+/*   ft_s_strcat.c                                    .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/19 22:53:13 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/21 17:38:52 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/21 17:32:15 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/22 18:17:52 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include "ft.h"
+#include <stdlib.h>
 
-void	ft_strin(char *dst)
+char	*ft_s_strcat(char *dst, char *src)
 {
-	char buf[32];
+	char	*buf;
+	char	*dst_;
+	char	*src_;
+	char	*str;
 
-	while (read(0, buf, 32) > 0)
-		ft_strcat(dst, buf);
+	if (!dst)
+		return (src);
+	if (!src)
+		return (dst);
+	dst_ = dst;
+	src_ = src;
+	while (*dst_++)
+		;
+	while (*src_++)
+		;
+	if (!(str = (char*)malloc(((dst_ - dst) + (src_ - src) + 1) * sizeof(char))))
+		return (str);
+	buf = str;
+	while (*dst)
+		*buf++ = *dst++;
+	while (*src)
+		*buf++ = *src++;
+	*buf = '\0';
+	return (str);
 }

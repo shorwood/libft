@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft.c                                             .::    .:/ .      .::   */
+/*   ft_strread.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/21 02:49:42 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/22 18:16:09 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/19 22:53:13 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/22 18:28:36 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "ft_s_strcat.c"
-#include "ft_s_strncat.c"
+#include <stdlib.h>
+#include "ft.h"
 
-int		main(void)
+char	*ft_strread(int fld, size_t bfs)
 {
-	char *str;
+	char	*buf;
+	char	*str;
 
-	str = malloc(5 * sizeof(char));
-	*str = '\0';
-
-	printf("%s\n", ft_s_strncat(NULL, "dgtgr\0dawdaw", 23));
-	return (0);
+	if (!(buf = (char*)malloc(bfs * sizeof(char))))
+		return (NULL);
+	str = NULL;
+	while ((bfs = read(fld, buf, bfs)) > 0)
+		(str = ft_s_strncat(str, buf, bfs));
+	free(buf);
+	return (str);
 }
