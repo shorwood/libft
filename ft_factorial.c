@@ -5,16 +5,16 @@
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/07 06:06:16 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/22 02:40:50 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/22 17:19:32 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/22 17:19:32 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 int		ft_factorial(int n)
 {
-    if (n == 1)
-        return (1);
-    else
-        return (n * ft_factorial(n - 1));
+	if (n == 1)
+		return (1);
+	else
+		return (n * ft_factorial(n - 1));
 }

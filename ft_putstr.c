@@ -6,14 +6,14 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/06 14:53:46 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/22 06:13:22 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/22 17:15:34 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putstr(char* str)
+void	ft_putstr(char *str)
 {
 	if (!str)
 		return ;
