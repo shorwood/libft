@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/22 15:29:51 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/22 17:04:59 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/22 17:09:56 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,7 +20,7 @@ char	*ft_strsqr(char *sym, unsigned int w, unsigned int h)
 	unsigned int	i;
 	unsigned int	j;
 
-	if (!(str = (char*)malloc((w * h + h + 1) * sizeof(char))))
+	if (!(str = (char*)malloc((w * h + h + 1) * sizeof(char))) || !sym)
 		return (str);
 	buf = str;
 	i = 0U;
