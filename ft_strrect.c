@@ -1,31 +1,43 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strsep.c                                      .::    .:/ .      .::   */
+/*   ft_strrect.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/22 15:43:19 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/22 16:00:20 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/22 15:29:51 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/22 17:23:59 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strsep(char *sym, unsigned int w)
+char	*ft_strrect(char *s, unsigned int w, unsigned int h)
 {
-	char *str;
-	char *buf;
+	char			*str;
+	char			*buf;
+	unsigned int	i;
+	unsigned int	j;
 
-	if (!(str = (char*)malloc((w + 2) * sizeof(char))))
+	if (!((str = (char*)malloc((w * h + h + 1) * sizeof(char))) && s && w * h))
 		return (str);
 	buf = str;
-	*buf++ = *sym++;
-	while (w-- > 1)
-		*buf++ = *sym;
-	*buf++ = *(sym + 1);
-	*buf++ = '\n';
+	i = 0U;
+	while (i < h)
+	{
+		j = 0U;
+		while (j < w)
+		{
+			*buf = *(s + 1);
+			*buf = (j == w - 1) ? *(s + 2) : *buf;
+			*buf++ = (j == 0) ? *s : *buf;
+			j++;
+		}
+		s += (i == 0) ? 3 : 0;
+		s += (i++ == h - 2) ? 3 : 0;
+		*buf++ = '\n';
+	}
 	*buf = '\0';
 	return (str);
 }
