@@ -6,15 +6,15 @@
 #    By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/07/16 12:26:44 by shorwood     #+#   ##    ##    #+#        #
-#    Updated: 2018/07/19 18:08:52 by shorwood    ###    #+. /#+    ###.fr      #
+#    Updated: 2018/07/21 02:37:27 by shorwood    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
 
 #--- Initialize compilation/linkeage parameters.
 NAME	= libft.a
-DSRC	= srcs
-DINC	= includes
+DSRC	= src
+DINC	= .
 CC		= gcc
 CFLAGS	= -Wall -Werror -Wextra
 LC		= ar

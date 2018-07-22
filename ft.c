@@ -1,19 +1,17 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_putnbr.h                                      .::    .:/ .      .::   */
+/*   ft.c                                             .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
+/*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/06 14:53:46 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/16 12:17:50 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/21 02:49:42 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/21 03:43:50 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#ifndef _FT_PUTNBR_H
-# define _FT_PUTNBR_H
-
-void	ft_putnbr(int x);
-
-#endif
+int		main(void)
+{
+	return (0);
+}

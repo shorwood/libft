@@ -6,9 +6,8 @@
 #--- Include tests & documentation.
 !*.md
 !*.pdf
-!*test.*
 
 #--- Include files to render.
-!includes/*.h
-!srcs/*.c
+!ft.*
+!src/*.c
 !Makefile
