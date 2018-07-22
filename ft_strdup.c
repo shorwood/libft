@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strncmp.c                                     .::    .:/ .      .::   */
+/*   ft_strdup.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
+/*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/09 22:08:58 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/10 21:23:19 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/05 15:12:37 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/22 06:24:10 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_strncmp(char *str, char *cmp, unsigned int n)
+#include <stdlib.h>
+
+char	*ft_strdup(char *str)
 {
-	if (!n)
-		return (0);
-	if (*str == *cmp)
-		return (ft_strncmp(str + 1, cmp + 1, n - 1));
-	return (*str - *cmp);
+	char *buf;
+	char *dup;
+
+	buf = str;
+	while (*buf)
+		buf++;
+	dup = malloc((buf - str + 1) * (sizeof(char)));
+	buf = dup;
+	while (*dup)
+		*buf++ = *str++;
+	*buf = '\0';
+	return (dup);
 }

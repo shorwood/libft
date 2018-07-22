@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strcpy.c                                      .::    .:/ .      .::   */
+/*   ft_strncat.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
+/*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/09 18:51:25 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/10 19:53:21 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/22 14:38:55 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dst, char *src)
+char	*ft_strncat(char *dst, char *src, int n)
 {
-	char *dst_s;
+	char *buf;
 
-	dst_s = dst;
-	while (*src)
-	{
-		*dst = *src;
-		dst++;
-		src++;
-	}
-	*dst = '\0';
-	return (dst_s);
+	if (!dst || !src)
+		return (dst);
+	buf = dst;
+	while (*buf)
+		buf++;
+	while (*src && n--)
+		*buf++ = *src++;
+	*buf = '\0';
+	return (dst);
 }

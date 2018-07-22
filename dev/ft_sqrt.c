@@ -3,31 +3,24 @@
 /*                                                              /             */
 /*   ft_sqrt.c                                        .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
+/*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/07 07:34:21 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/08 02:25:22 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/22 14:36:44 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		absolute(int n)
-{
-	if (n < 0)
-		return (-n);
-	return (n);
-}
-
 int		ft_sqrt(int n)
 {
-	int i;
+	int x;
 
-	i = 1;
-	while (i <= n)
+	x = 1;
+	while (x <= n)
 	{
-		if (i * i == n)
-			return (i);
-		i++;
+		if (x * x == n)
+			return (x);
+		x++;
 	}
 	return (0);
 }

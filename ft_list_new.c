@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_find_next_prime.c                             .::    .:/ .      .::   */
+/*   ft_list_new.c                                    .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
+/*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/07 17:29:01 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/12 04:19:59 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/18 12:11:01 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/22 01:48:09 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_is_prime(int x);
+#include <stdlib.h>
+#include "ft.h"
 
-int		ft_find_next_prime(int x)
+t_list	*ft_list_new(void *data)
 {
-	if (x < 2)
-		return (2);
-	if (!(x % 2))
-		x++;
-	while (!ft_is_prime(x))
-		x += 2;
-	return (x);
+	t_list *new;
+
+	if (!(new = malloc(sizeof(t_list))))
+		return (NULL);
+	new->data = data;
+	new->next = NULL;
+	return (new);
 }

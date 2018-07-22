@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_sqrt_test.c                                   .::    .:/ .      .::   */
+/*   ft_list_clear.c                                  .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
+/*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/07 07:34:24 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/07 22:31:06 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/18 21:14:26 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/22 01:26:56 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <math.h>
-#include "ft_sqrt.c"
+#include <stdlib.h>
+#include "ft.h"
 
-int		main(void)
+void	ft_list_clear(t_list **clr)
 {
-	int		i;
+	t_list *buf;
 
-	printf("-4: %d\n", ft_sqrt(-4));
-	printf("-1: %d\n", ft_sqrt(-1));
-	i = 0;
-	while (i <= 32)
+	__FT_P(clr && *clr);
+	while (*clr)
 	{
-		printf("%d: %d \n", i * i, ft_sqrt(i * i));
-		i++;
+		buf = *clr;
+		*clr = (*clr)->next;
+		free(buf->data);
+		free(buf);
 	}
-	return (0);
+	*clr = NULL;
 }

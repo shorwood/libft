@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strcmp.c                                      .::    .:/ .      .::   */
+/*   ft_list_push.c                                   .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
+/*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/09 22:08:58 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/10 18:21:03 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/18 12:11:01 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/22 01:47:50 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *str, char *cmp)
+#include "ft.h"
+
+void	ft_list_push(t_list **lst, void *data)
 {
-	if (!*str && !*cmp)
-		return (0);
-	if (*str == *cmp)
-		return (ft_strcmp(str + 1, cmp + 1));
-	return (*str - *cmp);
+	t_list *buf;
+
+	if (!lst)
+		return ;
+	if (!*lst)
+		*lst = ft_list_new(data);
+	else
+	{
+		buf = *lst;
+		while (buf->next)
+			buf = buf->next;
+		buf->next = ft_list_new(data);
+	}
 }

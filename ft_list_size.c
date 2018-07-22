@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_is_negative.c                                 .::    .:/ .      .::   */
+/*   ft_list_size.c                                   .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
+/*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/04 21:13:20 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/12 04:12:04 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/18 12:11:01 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/22 06:21:28 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include "ft.h"
 
-void	ft_is_negative(int n)
+int		ft_list_size(t_list *lst)
 {
-	if (n > -1)
-		ft_putchar('P');
-	else
-		ft_putchar('N');
+	int	n;
+
+	if (!lst)
+		return (0);
+	n = 1;
+	while (lst->next)
+	{
+		lst = lst->next;
+		n++;
+	}
+	return (n);
 }
