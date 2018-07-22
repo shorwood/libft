@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/06 14:53:46 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/22 17:15:34 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/22 21:09:07 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,8 +15,12 @@
 
 void	ft_putstr(char *str)
 {
+	char *buf;
+
 	if (!str)
 		return ;
-	while (*str)
-		write(1, str++, 1);
+	buf = str;
+	while (*buf++)
+		;
+	write(1, str, buf - str);
 }

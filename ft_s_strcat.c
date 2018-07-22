@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 17:32:15 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/22 18:17:52 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/22 20:43:26 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -30,7 +30,8 @@ char	*ft_s_strcat(char *dst, char *src)
 		;
 	while (*src_++)
 		;
-	if (!(str = (char*)malloc(((dst_ - dst) + (src_ - src) + 1) * sizeof(char))))
+	if (!(str = (char*)malloc(((dst_ - dst)
+							+ (src_ - src) + 1) * sizeof(char))))
 		return (str);
 	buf = str;
 	while (*dst)
