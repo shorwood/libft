@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft.h                                             .::    .:/ .      .::   */
+/*   ft_strsqr.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/21 02:13:36 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/22 14:48:14 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/22 15:29:51 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/22 16:14:07 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#ifndef _FT_H
-# define _FT_H
+#include <stdlib.h>
 
-
-# define __ASSERT(cnd) \
-	if (!(cnd)) return 
-
-# define __MASSERT(var, typ, siz) \
-	if ((var = (typ*)malloc(((size_t)siz) * sizeof(typ)))) return
-	
-typedef struct		s_list
+char	*ft_strsqr(char *sym, unsigned int w, unsigned int h)
 {
-	void			*data;
-	struct s_list	*next;
-}					t_list;
+	char			*str;
+	char			*buf;
+	unsigned int 	i;
+	unsigned int 	j;
 
-
-#endif
+	if (!(str = (char*)malloc((w * h + h + 1) * sizeof(char))))
+		return (str);
+	buf = str;
+	i = 0U;
+	while (i++ < h)
+	{
+		j = 0U;
+		*buf++ = *sym++;
+		while (j++ <= w)
+			*buf++ = *sym;
+		sym++;
+		*buf++ = *sym++;
+		*buf++ = '\n';
+	}
+	*buf = '\0';
+	return (str);
+}

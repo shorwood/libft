@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft.h                                             .::    .:/ .      .::   */
+/*   ft_strtrl.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/21 02:13:36 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/22 14:48:14 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/22 15:07:00 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/22 16:14:44 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#ifndef _FT_H
-# define _FT_H
-
-
-# define __ASSERT(cnd) \
-	if (!(cnd)) return 
-
-# define __MASSERT(var, typ, siz) \
-	if ((var = (typ*)malloc(((size_t)siz) * sizeof(typ)))) return
-	
-typedef struct		s_list
+void	ft_strtrl(char *str, char *c, char *r)
 {
-	void			*data;
-	struct s_list	*next;
-}					t_list;
-
-
-#endif
+	if (!str || !c || !r || !*c || !*r)
+		return ;
+	ft_strtrl(str, c + 1, r + 1);
+	while (*str)
+		if (*str == *c)
+			*str++ = *r;
+		else
+			str++;
+}

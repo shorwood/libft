@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/09 18:51:25 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/22 14:38:55 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/22 15:20:07 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,7 +20,7 @@ char	*ft_strncat(char *dst, char *src, int n)
 	buf = dst;
 	while (*buf)
 		buf++;
-	while (*src && n--)
+	while (n--)
 		*buf++ = *src++;
 	*buf = '\0';
 	return (dst);
