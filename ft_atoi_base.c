@@ -6,15 +6,14 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 02:47:14 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/21 04:19:57 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/22 14:43:35 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "ft.h"
-#include <stdbool.h>
 
-_INT	ft_atoi_base(_CCHR *str, _CHR base)
+int		ft_atoi_base(char *str, int base)
 {
 	int x;
 	int s;

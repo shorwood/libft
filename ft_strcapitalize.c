@@ -3,38 +3,38 @@
 /*                                                              /             */
 /*   ft_strcapitalize.c                               .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
+/*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/10 05:58:53 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/10 18:30:14 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/22 14:42:19 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 char	*ft_strcapitalize(char *str)
 {
-	char *str_s;
+	char *buf;
 
-	str_s = str;
-	while (*str)
+	buf = str;
+	while (*buf)
 	{
-		if ((*str >= '0' && *str <= '9')
-		|| (*str >= 'A' && *str <= 'Z')
-		|| (*str >= 'a' && *str <= 'z'))
+		if ((*buf >= '0' && *buf <= '9')
+		|| (*buf >= 'A' && *buf <= 'Z')
+		|| (*buf >= 'a' && *buf <= 'z'))
 		{
-			if (*str >= 'a' && *str <= 'z')
-				*str -= 32;
-			str++;
-			while ((*str >= '0' && *str <= '9')
-			|| (*str >= 'A' && *str <= 'Z')
-			|| (*str >= 'a' && *str <= 'z'))
+			if (*buf >= 'a' && *buf <= 'z')
+				*buf -= 32;
+			buf++;
+			while ((*buf >= '0' && *buf <= '9')
+			|| (*buf >= 'A' && *buf <= 'Z')
+			|| (*buf >= 'a' && *buf <= 'z'))
 			{
-				if (*str >= 'A' && *str <= 'Z')
-					*str += 32;
-				str++;
+				if (*buf >= 'A' && *buf <= 'Z')
+					*buf += 32;
+				buf++;
 			}
 		}
-		str++;
+		buf++;
 	}
-	return (str_s);
+	return (str);
 }
