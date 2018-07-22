@@ -9,5 +9,5 @@
 
 #--- Include files to render.
 !ft.*
-!src/*.c
+!*.c
 !Makefile
