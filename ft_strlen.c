@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 17:23:57 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/22 05:58:09 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/26 09:14:58 by mintran     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -22,3 +22,15 @@ int		ft_strlen(char *str)
 		;
 	return (buf - str);
 }
+
+/*
+ * Version recursive
+ * 
+ * int ft_strlen(char *str)
+ * {
+ * 	if (*str++)
+ * 		return (1 + ft_strlen(str));
+ * 	return (0);
+ * }
+ *
+ */
