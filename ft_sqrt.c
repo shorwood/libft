@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strrpl.c                                      .::    .:/ .      .::   */
+/*   ft_sqrt.c                                        .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/21 02:36:02 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/25 22:21:19 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/07 07:34:21 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/01 16:43:09 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-void	ft_strrpl(char *str, char c, char r)
+int		ft_sqrt(int n)
 {
-	if (!str)
-		return ;
-	while (*str)
-		if (*str == c)
-			*str++ = r;
-		else
-			str++;
+	int x;
+
+	x = 0;
+	while (++x <= n)
+		if (x * x == n)
+			return (x);
+	return (0);
 }

@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strrpl.c                                      .::    .:/ .      .::   */
+/*   ft_strskpnbr.c                                   .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/21 02:36:02 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/25 22:21:19 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/24 03:32:58 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/24 03:36:01 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-void	ft_strrpl(char *str, char c, char r)
+char	*ft_strskpnbr(char *str)
 {
-	if (!str)
-		return ;
-	while (*str)
-		if (*str == c)
-			*str++ = r;
-		else
-			str++;
+	while (*str >= '0' && *str++ <= '9')
+		;
+	return (str);
 }

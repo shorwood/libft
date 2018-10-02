@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 19:23:29 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/24 04:43:44 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/25 22:57:18 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -32,8 +32,6 @@ typedef struct		s_3d
 	int				y;
 	int				z;
 }					t_3d;
-
-/* ************************************************************************** */
 
 int					ft_atoi(char *str);
 int					ft_atoi_base(char *str, int base);
@@ -65,7 +63,7 @@ char				*ft_strncpy(char *dst, char *src, unsigned int n);
 char				*ft_strread(int fld, int bfs);
 char				*ft_strrect(char *s, unsigned int w, unsigned int h);
 char				*ft_strrev(char *str);
-void				strrpl(char *str, char c, char r);
+void				ft_strrpl(char *str, char c, char r);
 char				*ft_strstr(char *str, char *fnd);
 void				ft_strtrl(char *str, char *c, char *r);
 int					ft_strcmp(char *str, char *cmp);

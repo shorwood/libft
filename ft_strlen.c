@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 17:23:57 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/22 05:58:09 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/01 16:55:21 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -18,7 +18,7 @@ int		ft_strlen(char *str)
 	if (!str)
 		return (0);
 	buf = str;
-	while (*buf++)
-		;
+	while (*buf)
+		buf++;
 	return (buf - str);
 }
