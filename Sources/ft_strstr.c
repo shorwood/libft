@@ -6,20 +6,20 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/09 18:51:25 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/02 22:51:11 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/03 01:02:46 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strstr(const char *__big, const char *__little)
+char	*ft_strstr(const char *big, const char *ltl)
 {
-	if (!*__little)
-		return ((char*)__big);
-	if (!*__big)
+	if (!*ltl)
+		return ((char*)big);
+	if (!*big)
 		return (NULL);
-	if (*__big == *__little && ft_strstr(__big + 1, __little + 1) == __big + 1)
-		return ((char*)__big);
-	return (ft_strstr(__big + 1, __little));
+	if (*big == *ltl && ft_strstr(big + 1, ltl + 1) == big + 1)
+		return ((char*)big);
+	return (ft_strstr(big + 1, ltl));
 }
