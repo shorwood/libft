@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 22:16:39 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/02 22:51:52 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/03 01:11:34 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -26,7 +26,7 @@ void	test(char *msg, const char *big, const char *sml)
 
 	printf
 	(
-		"%-50s | %d | %-12p | %-30p \n", 
+		"| %-50s | %d | %-12p | %-12p |\n", 
 		msg,
 		ret_libc == ret_libft,
 		ret_libc,
@@ -36,21 +36,19 @@ void	test(char *msg, const char *big, const char *sml)
 
 int		main(void)
 {
-	char *str0;
-	char *str1;
-	
-	str0 = (char*)malloc(65535 * sizeof(char*));
-	str1 = (char*)malloc(65535 * sizeof(char*));
+	char *spn;
+	spn = (char*)malloc(89 * sizeof(char*));
 
-	printf("----------------------------------------------------------------\n");
-	test("Empty word as both word", "", "");
-	test("Empty word as the big word", "", "word");
-	test("Empty word as the small word", "word", "");
-	test("Matching words", "word", "word");
-	test("Unmatching words", "word", "world");
-	printf("----------------------------------------------------------------\n");
+	memset(spn, '-', 88);
+	printf("%s\n", spn);
+	test("Matching strings", "word", "word");
+	test("Unmatching strings in the middle", "word", "world");
+	test("Unmatching strings at the end", "word", "words");
+	test("Unmatching strings at the start", "jord", "word");
+	test("Empty strings as both word", "", "");
+	test("Empty strings as the big word", "", "word");
+	test("Empty strings as the little word", "word", "");
+	printf("%s\n", spn);
 
-	free(str0);
-	free(str1);
 	return (0);
 }

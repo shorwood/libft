@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 15:40:11 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/02 18:32:19 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/03 01:13:13 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,24 +16,37 @@
 #include <string.h>
 #include "../Sources/ft_strlen.c"
 
+
+
+void	test(const char *msg, const char *str)
+{
+	size_t ret_libc;
+	size_t ret_libft;
+
+	ret_libc = strlen(str);
+	ret_libft = ft_strlen(str);
+
+	printf
+	(
+		"| %-50s | %d | %-12d | %-12d |\n", 
+		msg,
+		ret_libc == ret_libft,
+		(int)ret_libc,
+		(int)ret_libft
+	);
+}
+
 int		main(void)
 {
-	char *str;
+	char *spn;
+	
+	spn = (char*)malloc(88 * sizeof(char*));
+	memset(spn, '-', 88);
 
-	str = (char*)malloc(65535 * sizeof(char*));
+	printf("%s\n", spn);
+	test("Empty strings", "");
+	test("Valid strings", "word");
+	printf("%s\n", spn);
 
-	//--- Testing with an empty word.
-	strcpy(str, "");
-	printf("String with 0 characters:		[%s]\n", (strlen(str) == ft_strlen(str)) ? "OK" : "KO");
-
-	//--- Testing normal behavior.
-	strcpy(str, "word");
-	printf("String with 4 characters: 		[%s]\n", (strlen(str) == ft_strlen(str)) ? "OK" : "KO");
-
-	//--- Testing with a lot of characters.
-	memset(str, '0', 65535);
-	printf("String with 65535 characters:	[%s]\n", (strlen(str) == ft_strlen(str)) ? "OK" : "KO");
-
-	free(str);
 	return (0);
 }

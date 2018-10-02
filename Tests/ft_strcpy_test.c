@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 15:40:11 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/02 22:19:46 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/03 01:11:06 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,36 +16,40 @@
 #include <string.h>
 #include "../Sources/ft_strcpy.c"
 
+void	test(const char *msg, const char *str)
+{
+	char *ret_libc;
+	char *ret_libft;
+	ret_libc = (char*)malloc(65535 * sizeof(char*));
+	ret_libft = (char*)malloc(65535 * sizeof(char*));
+
+	strcpy(ret_libc, str);
+	ft_strcpy(ret_libft, str);
+
+	printf
+	(
+		"| %-50s | %d | %-12s | %-12s |\n", 
+		msg,
+		!strcmp(ret_libc, ret_libft),
+		ret_libc,
+		ret_libft
+	);
+
+	free(ret_libc);
+	free(ret_libft);
+}
+
 int		main(void)
 {
-	char *str0;
-	char *str1;
-	char *cpy;
+	char *spn;
 	
-	str0 = (char*)malloc(65535 * sizeof(char*));
-	str1 = (char*)malloc(65535 * sizeof(char*));
-	cpy = (char*)malloc(65535 * sizeof(char*));
+	spn = (char*)malloc(88 * sizeof(char*));
+	memset(spn, '-', 88);
 
-	//--- Testing with an empty word.
-	strcpy(cpy, "");
-	strcpy(str0, cpy);
-	ft_strcpy(str1, cpy);
-	printf("String with 0 characters: 		[%s]\n", !strcmp(str0, str1) ? "OK" : "KO");
+	printf("%s\n", spn);
+	test("Valid strings", "word");
+	test("Empty strings", "");
+	printf("%s\n", spn);
 
-	//--- Testing normal behavior.
-	strcpy(cpy, "word");
-	strcpy(str0, cpy);
-	ft_strcpy(str1, cpy);
-	printf("String with 4 characters: 		[%s]\n", !strcmp(str0, str1) ? "OK" : "KO");
-
-	//--- Testing with a lot of characters.
-	memset(cpy, '0', 65535);
-	strcpy(str0, cpy);
-	ft_strcpy(str1, cpy);
-	printf("String with 65535 characters:	[%s]\n", !strcmp(str0, str1) ? "OK" : "KO");
-
-	free(str0);
-	free(str1);
-	free(cpy);
 	return (0);
 }
