@@ -6,12 +6,14 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 17:23:57 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/01 16:55:21 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/02 17:42:25 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
+#include <stdlib.h>
+
+size_t	ft_strlen(char *str)
 {
 	char *buf;
 
