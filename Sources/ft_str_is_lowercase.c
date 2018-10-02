@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_str_is_alpha.c                                .::    .:/ .      .::   */
+/*   ft_str_is_lowercase.c                            .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/10 05:58:53 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/02 18:43:20 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/10 18:33:41 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_str_is_alpha(char *str)
+int		ft_str_is_lowercase(char *str)
 {
 	while (*str)
 	{
-		if ((*str < 'a' || *str > 'z')
-			&& (*str < 'A' || *str > 'Z'))
+		if (*str < 'a' || *str > 'z')
 			return (0);
 		str++;
 	}
