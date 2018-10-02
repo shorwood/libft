@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_str_is_lowercase.c                            .::    .:/ .      .::   */
+/*   ft_isprint.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
+/*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/10 05:58:53 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/10 18:33:41 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/02 20:17:14 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_str_is_lowercase(char *str)
+int		ft_isprint(int c)
 {
-	while (*str)
-	{
-		if (*str < 'a' || *str > 'z')
-			return (0);
-		str++;
-	}
+	if (c < ' ' || c > '~')
+		return (0);
 	return (1);
 }

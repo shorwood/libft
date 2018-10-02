@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_str_is_printable.c                            .::    .:/ .      .::   */
+/*   ft_isascii.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
+/*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/10 05:58:53 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/10 18:28:26 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/02 20:46:22 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_str_is_printable(char *str)
+int		ft_isascii(int c)
 {
-	while (*str)
-	{
-		if (*str < 32 || *str > 127)
-			return (0);
-		str++;
-	}
+	if (c < 0x00 || c > 0x7F)
+		return (0);
 	return (1);
 }

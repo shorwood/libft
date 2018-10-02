@@ -1,19 +1,35 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_islower.c                                     .::    .:/ .      .::   */
+/*   ft_strdup.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/10 05:58:53 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/02 20:30:32 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/05 15:12:37 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/02 22:05:25 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_islower(int c)
+#include <stdlib.h>
+
+char	*ft_strdup(char *str)
 {
-	if (c < 'a' || c > 'z')
-		return (0);
-	return (1);
+	char *buf;
+	char *dup;
+
+	buf = str;
+	while (*str)
+		str++;
+	dup = malloc((str - buf + 1) * (sizeof(char)));
+	str = buf;
+	buf = dup;
+	while (*str)
+	{
+		*buf = *str;
+		str++;
+		buf++;
+	}
+	*buf = '\0';
+	return (dup);
 }
