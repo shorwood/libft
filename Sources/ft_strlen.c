@@ -6,20 +6,20 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 17:23:57 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/02 17:42:25 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/02 17:52:24 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	char *buf;
 
 	if (!str)
 		return (0);
-	buf = str;
+	buf = (char*)str;
 	while (*buf)
 		buf++;
 	return (buf - str);
