@@ -6,12 +6,12 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/09 18:51:25 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/02 21:18:14 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/03 00:58:33 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dst, char *src)
+char	*ft_strcpy(char *dst, const char *src)
 {
 	char *buf;
 
