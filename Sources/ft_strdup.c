@@ -6,30 +6,26 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/05 15:12:37 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/02 22:05:25 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/03 18:44:39 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strdup(char *str)
+
+char	*ft_strdup(const char *str)
 {
 	char *buf;
 	char *dup;
 
-	buf = str;
-	while (*str)
-		str++;
-	dup = malloc((str - buf + 1) * (sizeof(char)));
-	str = buf;
+	buf = (char*)str;
+	while (*buf++)
+		;
+	dup = malloc((buf - str) * sizeof(char));
 	buf = dup;
 	while (*str)
-	{
-		*buf = *str;
-		str++;
-		buf++;
-	}
+		*buf++ = *str++;
 	*buf = '\0';
 	return (dup);
 }
