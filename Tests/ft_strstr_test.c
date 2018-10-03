@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 22:16:39 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/03 01:11:34 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/03 18:49:22 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -23,7 +23,6 @@ void	test(char *msg, const char *big, const char *sml)
 
 	ret_libc = strstr(big, sml);
 	ret_libft = ft_strstr(big, sml);
-
 	printf
 	(
 		"| %-50s | %d | %-12p | %-12p |\n", 
@@ -49,6 +48,5 @@ int		main(void)
 	test("Empty strings as the big word", "", "word");
 	test("Empty strings as the little word", "word", "");
 	printf("%s\n", spn);
-
 	return (0);
 }

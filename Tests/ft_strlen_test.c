@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 15:40:11 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/03 01:13:13 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/03 18:49:11 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -25,7 +25,6 @@ void	test(const char *msg, const char *str)
 
 	ret_libc = strlen(str);
 	ret_libft = ft_strlen(str);
-
 	printf
 	(
 		"| %-50s | %d | %-12d | %-12d |\n", 

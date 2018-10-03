@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 15:40:11 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/03 01:11:06 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/03 18:49:08 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -25,7 +25,6 @@ void	test(const char *msg, const char *str)
 
 	strcpy(ret_libc, str);
 	ft_strcpy(ret_libft, str);
-
 	printf
 	(
 		"| %-50s | %d | %-12s | %-12s |\n", 
@@ -34,7 +33,6 @@ void	test(const char *msg, const char *str)
 		ret_libc,
 		ret_libft
 	);
-
 	free(ret_libc);
 	free(ret_libft);
 }
