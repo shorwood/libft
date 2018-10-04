@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 15:40:11 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/04 16:11:27 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/04 17:18:20 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,11 +21,12 @@ void	test(const char *msg, const char *str, unsigned long n)
 	char *ret_libc;
 	char *ret_libft;
 	ret_libc = (char*)calloc(65535, sizeof(char*));
+	memset(ret_libc, '.', 12);
 	ret_libft = (char*)calloc(65535, sizeof(char*));
+	memset(ret_libft, '.', 12);
 
-
-	strncpy(ret_libc, str, n);
-	ft_strncpy(ret_libft, str, n);
+	ret_libc = strncpy(ret_libc, str, n);
+	ret_libft = ft_strncpy(ret_libft, str, n);
 	printf
 	(
 		"| %-50s | %d | %-12s | %-12s |\n", 
@@ -50,8 +51,7 @@ int		main(void)
 	test("Valid string with cropped range", "lorem", 3);
 	test("Valid string with out of bound range", "lorem", 6);
 	test("Valid string with zero range", "lorem", 0);
-	test("Valid string with empty string & out of bound", "", 5);
-	//test("Empty string", "", 0);
+	test("Empty string with out of bound range", "", 5);
 	printf("%s\n", spn);
 
 	return (0);
