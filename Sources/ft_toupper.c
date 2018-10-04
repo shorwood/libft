@@ -6,14 +6,12 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 22:02:07 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/02 22:04:53 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/04 15:12:28 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 int		ft_toupper(int c)
 {
-	if (c < 'a' || c > 'z')
-		return (c - 32);
-	return (c);
+	return ((c < 'a' || c > 'z') ? c : c - 32);
 }
