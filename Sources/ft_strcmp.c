@@ -6,12 +6,12 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/09 22:08:58 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/01 19:22:33 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/04 15:56:16 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *str, char *cmp)
+int		ft_strcmp(const char *str, const char *cmp)
 {
 	if (!*str && !*cmp)
 		return (0);
