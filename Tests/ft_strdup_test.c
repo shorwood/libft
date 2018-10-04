@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 15:40:11 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/03 18:48:57 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/04 14:40:57 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -42,8 +42,8 @@ int		main(void)
 	memset(spn, '-', 88);
 
 	printf("%s\n", spn);
-	test("Valid strings", "Lorem Ipsum");
-	test("Empty strings", "");
+	test("Valid string", "word");
+	test("Empty string", "");
 	printf("%s\n", spn);
 
 	return (0);
