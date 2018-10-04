@@ -6,22 +6,18 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 17:32:15 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/02 22:08:01 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/04 14:49:34 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dst, char *src)
+char	*ft_strcat(char *dst, const char *src)
 {
 	char *buf;
 
-	if (!dst)
-		return (src);
-	if (!src)
-		return (dst);
 	buf = dst;
-	while (*buf++)
-		;
+	while (*buf)
+		buf++;
 	while (*src)
 		*buf++ = *src++;
 	*buf = '\0';
