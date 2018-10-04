@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 15:40:11 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/04 16:56:38 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/04 17:24:39 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,8 +21,14 @@ void	test(const char *msg, char *dst, const char *src)
 	char *ret_libc;
 	char *ret_libft;
 
-	ret_libc = strcat(strdup(dst), src);
-	ret_libft = ft_strcat(strdup(dst), src);
+	ret_libc = strdup(dst);
+	ret_libft = strdup(dst);
+	memset(ret_libc, '.', 12);
+	memset(ret_libft, '.', 12);
+	strcpy(ret_libc, dst);
+	strcpy(ret_libft, dst);
+	ret_libc = strcat(ret_libc, src);
+	ret_libft = ft_strcat(ret_libft, src);
 	printf
 	(
 		"| %-50s | %d | %-12s | %-12s |\n", 
