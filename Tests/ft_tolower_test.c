@@ -1,0 +1,51 @@
+/* ************************************************************************** */
+/*                                                          LE - /            */
+/*                                                              /             */
+/*   ft_tolower_test.c                                .::    .:/ .      .::   */
+/*                                                 +:+:+   +:    +:  +:+:+    */
+/*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*                                                 #+#   #+    #+    #+#      */
+/*   Created: 2018/10/02 15:40:11 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/04 15:05:07 by shorwood    ###    #+. /#+    ###.fr     */
+/*                                                         /                  */
+/*                                                        /                   */
+/* ************************************************************************** */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include "../Sources/ft_tolower.c"
+
+void	test(const char *msg, int c)
+{
+	int ret_libc;
+	int ret_libft;
+
+	ret_libc = tolower(c);
+	ret_libft = ft_tolower(c);
+	printf
+	(
+		"| %-50s | %d | %-12c | %-12c |\n", 
+		msg,
+		ret_libc == ret_libft,
+		ret_libc,
+		ret_libft
+	);
+}
+
+int		main(void)
+{
+	char *spn;
+	
+	spn = (char*)malloc(88 * sizeof(char*));
+	memset(spn, '-', 88);
+
+	printf("%s\n", spn);
+	int c = 127;
+	while (c-- > ' ')
+		test("Testing character", c);
+	printf("%s\n", spn);
+
+	return (0);
+}
