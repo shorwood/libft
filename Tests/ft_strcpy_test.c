@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 15:40:11 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/04 16:08:15 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/04 17:19:08 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,7 +21,9 @@ void	test(const char *msg, const char *str)
 	char *ret_libc;
 	char *ret_libft;
 	ret_libc = (char*)calloc(65535, sizeof(char*));
+	memset(ret_libc, '.', 12);
 	ret_libft = (char*)calloc(65535, sizeof(char*));
+	memset(ret_libft, '.', 12);
 
 	strcpy(ret_libc, str);
 	ft_strcpy(ret_libft, str);

@@ -6,22 +6,17 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/09 18:51:25 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/22 18:19:14 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/04 17:22:25 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dst, char *src, int n)
+#include <unistd.h>
+
+char	*ft_strncat(char *dst, const char *src, size_t n)
 {
 	char *buf;
 
-	if (!dst)
-	{
-		src[n - 1] = '\0';
-		return (src);
-	}
-	if (!src)
-		return (ft_strncat(src, dst, n));
 	buf = dst;
 	while (*buf)
 		buf++;

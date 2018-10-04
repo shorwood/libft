@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 15:40:11 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/04 14:43:19 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/04 16:56:38 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,10 +21,8 @@ void	test(const char *msg, char *dst, const char *src)
 	char *ret_libc;
 	char *ret_libft;
 
-	ret_libc = strndup(dst, 10);
-	ret_libft = strndup(dst, 10);
-	strcat(ret_libc, src);
-	ft_strcat(ret_libft, src);
+	ret_libc = strcat(strdup(dst), src);
+	ret_libft = ft_strcat(strdup(dst), src);
 	printf
 	(
 		"| %-50s | %d | %-12s | %-12s |\n", 
@@ -45,7 +43,7 @@ int		main(void)
 	printf("%s\n", spn);
 	test("Valid strings", "lorem", "ipsum");
 	test("Empty source string", "lorem", "");
-	test("Empty destination string", "\0xxxx", "ipsum");
+	test("Empty destination string", "", "ipsum");
 	printf("%s\n", spn);
 
 	return (0);

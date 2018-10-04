@@ -6,21 +6,19 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/09 18:51:25 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/04 16:07:00 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/04 16:53:09 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <unistd.h>
 
-char	*ft_strncpy(char *dst, const char *src, unsigned long n)
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
 	char *buf;
 
-	if (!dst || !src || !n)
-		return (NULL);
 	buf = dst;
-	while (n--)
+	while (len--)
 		*buf++ = *src++;
 	return (dst);
 }
