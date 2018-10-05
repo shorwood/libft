@@ -6,12 +6,12 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/10 05:58:53 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/02 20:30:24 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/05 16:40:12 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_isaplha(int c)
+int		ft_isalpha(int c)
 {
 	if ((c < 'a' || c > 'z')
 		&& (c < 'A' || c > 'Z'))
