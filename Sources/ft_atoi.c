@@ -6,25 +6,23 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 02:48:36 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/02 22:10:37 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/05 17:24:48 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_atoi(char *str)
+int		ft_atoi(const char *str)
 {
 	int	x;
 	int	s;
 
-	if (!str)
-		return (0);
 	x = 0;
 	s = 1;
 	while ((*str >= '\t' && *str <= '\r') || *str == ' ')
 		str++;
 	if (*str == '+')
 		str++;
-	if (*str == '-')
+	else if (*str == '-')
 	{
 		s = -1;
 		str++;
