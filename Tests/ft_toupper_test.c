@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 15:40:11 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/04 15:10:11 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/05 16:37:39 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -42,10 +42,9 @@ int		main(void)
 	memset(spn, '-', 88);
 
 	printf("%s\n", spn);
-	int c = 127;
-	while (c-- > ' ')
-		test("Testing character", c);
+	int c = 64;
+	while (c < 124)
+		test("Testing character", c++);
 	printf("%s\n", spn);
-
 	return (0);
 }
