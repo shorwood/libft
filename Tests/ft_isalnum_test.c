@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_tolower_test.c                                .::    .:/ .      .::   */
+/*   ft_isalnum_test.c                                .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 15:40:11 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/05 16:57:00 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/05 16:56:49 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include "../Sources/ft_tolower.c"
+#include "../Sources/ft_isalnum.c"
 
 void	test(const char *msg)
 {
@@ -23,11 +23,11 @@ void	test(const char *msg)
 	int ret_libc = 0;
 	int ret_libft = 0;
 	int c = -2; while (c++ <= 0x80)
-		if (tolower(c) != ft_tolower(c))
+		if (isalnum(c) != ft_isalnum(c))
 		{
 			res = 0;
-			ret_libc = tolower(c);
-			ret_libft = ft_tolower(c);
+			ret_libc = isalnum(c);
+			ret_libft = ft_isalnum(c);
 		}
 	printf("| %-50s | %d | %-12d | %-12d |\n", msg, res, ret_libc, ret_libft);
 }

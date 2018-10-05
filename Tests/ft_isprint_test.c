@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_tolower_test.c                                .::    .:/ .      .::   */
+/*   ft_isprint_test.c                                .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 15:40:11 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/05 16:57:00 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/05 17:04:06 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include "../Sources/ft_tolower.c"
+#include "../Sources/ft_isprint.c"
 
 void	test(const char *msg)
 {
@@ -23,11 +23,11 @@ void	test(const char *msg)
 	int ret_libc = 0;
 	int ret_libft = 0;
 	int c = -2; while (c++ <= 0x80)
-		if (tolower(c) != ft_tolower(c))
+		if (isprint(c) != ft_isprint(c))
 		{
 			res = 0;
-			ret_libc = tolower(c);
-			ret_libft = ft_tolower(c);
+			ret_libc = isprint(c);
+			ret_libft = ft_isprint(c);
 		}
 	printf("| %-50s | %d | %-12d | %-12d |\n", msg, res, ret_libc, ret_libft);
 }
