@@ -6,18 +6,18 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/09 22:08:58 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/07 12:00:50 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/07 12:07:36 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+int		ft_memcmp(const void *blk, const void *cmp, size_t len)
 {
-	if (!n)
+	if (!len)
 		return (0);
-	if (*(unsigned char*)s1 == *(unsigned char*)s2)
-		return (ft_memcmp(++s1, ++s2, --n));
-	return (*(unsigned char*)s1 - *(unsigned char*)s2);
+	if (*(unsigned char*)blk == *(unsigned char*)cmp)
+		return (ft_memcmp(++blk, ++cmp, --len));
+	return (*(unsigned char*)blk - *(unsigned char*)cmp);
 }
