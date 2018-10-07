@@ -14,15 +14,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../Sources/ft_memmove.c"
+#include "../Sources/ft_memcpy.c"
 
 static 
 void	test_overlap(const char *msg, void *dst, size_t offset, size_t n)
 {
-	void *ret_libc = strdup(dst);
-	void *ret_libft = strdup(dst);
-	memmove(ret_libc + offset, ret_libc, n);
-	ft_memmove(ret_libft + offset, ret_libft, n);
+	void *ret_libc;
+	void *ret_libft;
+
+	ret_libc = malloc(n);
+	ret_libft = malloc(n);
+	memcpy(ret_libc, dst, n);
+	memcpy(ret_libft, dst, n);
+	memcpy(ret_libc + offset, ret_libc, n);
+	ft_memcpy(ret_libft + offset, ret_libft, n);
 	printf
 	(
 		"| %-50s | %d | %-12s | %-12s |\n", 
@@ -38,8 +43,8 @@ void	test(const char *msg, void *dst, const void *src, size_t n)
 {
 	void *ret_libc = strdup(dst);
 	void *ret_libft = strdup(dst);
-	memmove(ret_libc, src, n);
-	ft_memmove(ret_libft, src, n);
+	memcpy(ret_libc, src, n);
+	ft_memcpy(ret_libft, src, n);
 	printf
 	(
 		"| %-50s | %d | %-12s | %-12s |\n", 

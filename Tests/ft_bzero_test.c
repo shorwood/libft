@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_memcmp_test.c                                 .::    .:/ .      .::   */
+/*   ft_bzero_test.c                                  .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 15:40:11 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/07 13:42:50 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/07 13:40:08 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,23 +14,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../Sources/ft_memcmp.c"
+#include "../Sources/ft_bzero.c"
 
 static 
-void	test(const char *msg, char *str, const void *cmp, size_t n)
+void	test(const char *msg, size_t n)
 {
-	int ret_libc;
-	int ret_libft;
+	void *ret_libc = malloc(n);
+	void *ret_libft = malloc(n);
 
-	ret_libc = memcmp(str, cmp, n);
-	ret_libft = ft_memcmp(str, cmp, n);
+	bzero(ret_libc, n);
+	ft_bzero(ret_libft, n);
 	printf
 	(
 		"| %-50s | %d | %-12d | %-12d |\n", 
 		msg,
-		ret_libc == ret_libft,
-		ret_libc,
-		ret_libft
+		!memcmp(ret_libc, ret_libft, n),
+		*(uint8_t*)ret_libc,
+		*(uint8_t*)ret_libft
 	);
 }
 
@@ -42,14 +42,9 @@ int		main(void)
 	memset(spn, '-', 88);
 
 	printf("%s\n", spn);
-	test("Matching strings with valid range", "lorem", "lorem", 5);
-	test("Matching strings with overflowing range", "lorem", "lorem", 7);
-	test("Unmatching at the end with valid range", "lorem", "lorep", 5);
-	test("Unmatching at the end with cropped range", "lorem", "lorep", 4);
-	test("Unmatching at the start with cropped range", "lorem", "porem", 1);
-	test("Empty string as both strings", "", "", 5);
-	test("Empty string as the first string", "", "porem", 5);
-	test("Empty string as the second string", "lorem", "", 5);
+	test("Initialize an array of 0 'Zero' bytes", 0);
+	test("Initialize an array of 16 'Zero' bytes", 16);
+	test("Initialize an array of 256 'Zero' bytes", 256);
 	printf("%s\n", spn);
 
 	return (0);
