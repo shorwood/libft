@@ -3,49 +3,39 @@
 /*                                                              /             */
 /*   ft_strlcat.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: shorwood <shorwood@student.101.fr>         +:+   +:    +:    +:+     */
+/*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/09 18:51:25 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/10 23:36:09 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/07 09:46:20 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(char *str)
+#include <unistd.h>
+
+size_t	ft_strlcat(char *dst, const char *src, size_t len)
 {
-	char *str_s;
+	char	*buf;
+	size_t	ret;
 
-	str_s = str;
-	while (*str)
-		str++;
-	return (str - str_s);
-}
-
-unsigned int	ft_strlcat(char *dst, char *src, int n)
-{
-	char			*src_s;
-	unsigned int	dst_len;
-
-	src_s = src;
-	dst_len = 0;
-	while (*dst && n)
+	ret = 0;
+	buf = (char*)src;
+	while (*buf++)
+		ret++;
+	buf = (char*)src;
+	while (*dst && len)
 	{
-		dst_len++;
 		dst++;
-		n--;
+		len--;
+		ret++;
 	}
-	if (n < 1)
-		return (dst_len + ft_strlen(src_s));
-	while (*src)
-	{
-		if (n != 1)
-		{
-			*dst = *src;
-			dst++;
-			n--;
-		}
-		src++;
-	}
+	if (!len)
+		return (ret);
+	while (*buf)
+		if (len > 1 && len--)
+			*dst++ = *buf++;
+		else
+			buf++;
 	*dst = '\0';
-	return (dst_len + ft_strlen(src_s));
+	return (ret);
 }
