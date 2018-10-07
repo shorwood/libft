@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/05 15:12:37 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/07 09:47:28 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/07 11:22:59 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,7 +21,8 @@ char	*ft_strdup(const char *str)
 	buf = (char*)str;
 	while (*buf++)
 		;
-	dup = malloc((buf - str) * sizeof(char));
+	if (!(dup = malloc((buf - str) * sizeof(char))))
+		return (NULL);
 	buf = dup;
 	while (*str)
 		*buf++ = *str++;
