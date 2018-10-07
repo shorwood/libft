@@ -4,7 +4,7 @@
 !.gitignore
 
 #--- Include tests & documentation.
-!*.md\
+!*.md
 !*.pdf
 
 #--- Include files to render.
