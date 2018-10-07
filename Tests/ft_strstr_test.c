@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 22:16:39 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/03 18:49:22 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/07 10:10:03 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -40,13 +40,16 @@ int		main(void)
 
 	memset(spn, '-', 88);
 	printf("%s\n", spn);
-	test("Matching strings", "word", "word");
-	test("Unmatching strings in the middle", "word", "world");
-	test("Unmatching strings at the end", "word", "words");
-	test("Unmatching strings at the start", "jord", "word");
+	test("Matching strings", "lorem", "lorem");
+	test("Matching strings at the start", "lorem", "lo");
+	test("Matching strings at the middle", "lorem", "re");
+	test("Matching strings at the end", "lorem", "em");
+	test("Unmatching strings at the start", "lorem", "porem");
+	test("Unmatching strings in the middle", "lorem", "lopem");
+	test("Unmatching strings at the end", "lorem", "lorep");
 	test("Empty strings as both word", "", "");
-	test("Empty strings as the big word", "", "word");
-	test("Empty strings as the little word", "word", "");
+	test("Empty strings as the big word", "", "lorem");
+	test("Empty strings as the little word", "lorem", "");
 	printf("%s\n", spn);
 	return (0);
 }
