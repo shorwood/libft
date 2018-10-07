@@ -6,12 +6,12 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/09 18:51:25 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/07 10:56:02 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/07 12:20:09 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 
 char	*ft_strnstr(const char *big, const char *ltl, size_t len)
 {

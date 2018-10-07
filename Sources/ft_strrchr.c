@@ -6,12 +6,12 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/09 18:51:25 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/07 11:18:55 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/07 12:20:12 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 
 char	*ft_strrchr(const char *str, int c)
 {
