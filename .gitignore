@@ -11,3 +11,5 @@
 !*.h
 !*.c
 !Makefile
+
+42FileChecker
