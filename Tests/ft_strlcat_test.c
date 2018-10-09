@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 15:40:11 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/07 09:45:28 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/09 11:08:52 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -36,7 +36,7 @@ void	test(const char *msg, char *dst, const char *src, size_t len)
 	(
 		"| %-50s | %d | %-2d %-9s | %-2d %-9s |\n", 
 		msg,
-		!strcmp(dst0, dst1) && ret_libc == ret_libft,
+		!memcmp(dst0, dst1, 14) && ret_libc == ret_libft,
 		ret_libc, dst0,
 		ret_libft, dst1
 	);

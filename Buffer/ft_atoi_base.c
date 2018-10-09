@@ -6,14 +6,24 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 02:47:14 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/22 14:43:35 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/09 09:19:07 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "ft.h"
+static
+int		ft_ctoi(char c)
+{
+	if (c >= '0' && c <= '9')
+		return (c - '0');
+	if (c >= 'A' && c <= 'F')
+		return (c - 'A' + 10);
+	if (c >= 'a' && c <= 'f')
+		return (c - 'a' + 10);
+	return (-1);
+}
 
-int		ft_atoi_base(char *str, int base)
+int		ft_atoi_base(const char *str, int base)
 {
 	int x;
 	int s;

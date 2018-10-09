@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 22:16:39 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/07 11:11:11 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/07 17:27:18 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -40,6 +40,7 @@ int		main(void)
 
 	memset(spn, '-', 88);
 	printf("%s\n", spn);
+	test("Matching string terminating character", "lorem lorem", '\0');
 	test("Matching character at the start", "lorem lorem", 'l');
 	test("Matching character at the middle", "lorem lorem", 'r');
 	test("Matching character at the end", "lorem lorem", 'm');
