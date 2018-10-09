@@ -6,7 +6,7 @@
 #    By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/07/16 12:26:44 by shorwood     #+#   ##    ##    #+#        #
-#    Updated: 2018/10/07 11:35:48 by shorwood    ###    #+. /#+    ###.fr      #
+#    Updated: 2018/10/09 09:20:19 by shorwood    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -15,6 +15,7 @@
 NAME	= libft.a
 DSRC	= Sources
 DINC	= Includes
+DOBJ	= Objects
 CC		= gcc
 CFLAGS	= -Wall -Werror -Wextra
 LC		= ar
@@ -27,10 +28,10 @@ SRC	= $(wildcard $(DSRC)/*.c $(DSRC)/*.cc)
 # **************************************************************************** #
 
 #--- Default instruction to make the library.
-deploy: $(NAME)
-	
-#--- Default instruction to make the library.
 all: $(NAME)
+
+#--- Default instruction to make the library.
+deploy: $(NAME)
 
 # **************************************************************************** #
 
@@ -40,7 +41,7 @@ all: $(NAME)
 #--- Translate into object binary. Depends on assembler code.
 %.o: %.c
 	@$(CC) $(CFLAGS) -I$(DINC) $< -o $@ -c
-	@echo "- Translating $< to object"
+	@echo "- Translating $< into an object file"
 
 #--- Assemble static library. Depends on compiled object binary.
 $(NAME): $(SRC:%.c=%.o)
