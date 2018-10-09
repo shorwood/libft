@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 19:23:29 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/09 09:49:47 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/09 16:27:23 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -36,6 +36,7 @@ int		ft_toupper(int c);
 /*
 ** 'string.h' Functions
 */
+int		ft_atoi(const char *str);
 void	*ft_bzero(void *mem, size_t len);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t len);
 void	*ft_memchr(const void *mem, int byt, size_t len);
@@ -57,9 +58,5 @@ char	*ft_strnstr(const char *big, const char *ltl, size_t len);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strstr(const char *big, const char *ltl);
-/*
-** 'math.h' Functions
-*/
-int		ft_atoi(const char *str);
 
 #endif
