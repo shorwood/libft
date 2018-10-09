@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 15:40:11 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/04 19:00:13 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/09 16:22:28 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -45,6 +45,8 @@ int		main(void)
 	test("Matching strings with out of bound range", "lorem", "lorem", 6);
 	test("Unmatching strings with cropped range", "lorem", "lorep", 4);
 	test("Unmatching strings with range as zero", "lorem", "ispum", 0);
+	test("Unmatching strings with non ASCII character", "lore∑", "lorem", 5);
+	test("Unmatching strings with char. w/ value -128", "lorem\200", "lorem", 6);
 	test("Empty string as both strings", "", "", 0);
 	test("Empty string as the first string", "", "porem", 5);
 	test("Empty string as the second string", "lorem", "", 5);
