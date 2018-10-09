@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/09 18:51:25 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/07 12:19:37 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/09 16:09:06 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,10 +15,11 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	while (*str)
+	while (*str || !c)
+	{
 		if (*str == c)
-			return ((char*)str);
-		else
-			str++;
+			return (char*)(str);
+		str++;
+	}
 	return (NULL);
 }
