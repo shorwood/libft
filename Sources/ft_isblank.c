@@ -6,14 +6,12 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/10 05:58:53 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/02 20:42:38 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/09 09:11:01 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 int		ft_isblank(int c)
 {
-	if (c != ' ' && c != '\t')
-		return (0);
-	return (1);
+	return (c == ' ' || c == '\t');
 }

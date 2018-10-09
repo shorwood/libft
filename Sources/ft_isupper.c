@@ -6,14 +6,12 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/10 05:58:53 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/02 20:47:25 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/09 09:12:03 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 int		ft_isupper(int c)
 {
-	if (c < 'A' || c > 'Z')
-		return (0);
-	return (1);
+	return (c >= 'A' && c <= 'Z');
 }

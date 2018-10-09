@@ -6,14 +6,12 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/10 05:58:53 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/02 20:30:32 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/09 09:11:51 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 int		ft_islower(int c)
 {
-	if (c < 'a' || c > 'z')
-		return (0);
-	return (1);
+	return (c >= 'a' && c <= 'z');
 }

@@ -6,14 +6,12 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/10 05:58:53 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/02 20:46:22 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/09 09:10:55 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 int		ft_isascii(int c)
 {
-	if (c < 0x00 || c > 0x7F)
-		return (0);
-	return (1);
+	return (c >= 0x00 && c <= 0x7F);
 }
