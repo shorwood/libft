@@ -1,6 +1,5 @@
 #--- Ignore everything.
 *
-!*/
 !.gitignore
 
 #--- Include tests & documentation.
@@ -11,5 +10,3 @@
 !*.h
 !*.c
 !Makefile
-
-42FileChecker

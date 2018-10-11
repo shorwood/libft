@@ -6,16 +6,15 @@
 #    By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/07/16 12:26:44 by shorwood     #+#   ##    ##    #+#        #
-#    Updated: 2018/10/09 09:20:19 by shorwood    ###    #+. /#+    ###.fr      #
+#    Updated: 2018/10/09 21:20:25 by shorwood    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
 
 #--- Initialize compilation/linkeage parameters.
 NAME	= libft.a
-DSRC	= Sources
-DINC	= Includes
-DOBJ	= Objects
+DSRC	= .
+DINC	= .
 CC		= gcc
 CFLAGS	= -Wall -Werror -Wextra
 LC		= ar
@@ -23,7 +22,7 @@ LFLAGS	= rus
 LR		= ranlib
 
 #--- Set source project dependencies.
-SRC	= $(wildcard $(DSRC)/*.c $(DSRC)/*.cc)
+SRC	= $(wildcard $(DSRC)/*.c)
 
 # **************************************************************************** #
 
@@ -31,7 +30,7 @@ SRC	= $(wildcard $(DSRC)/*.c $(DSRC)/*.cc)
 all: $(NAME)
 
 #--- Default instruction to make the library.
-deploy: $(NAME)
+deploy: all clean
 
 # **************************************************************************** #
 
@@ -39,20 +38,24 @@ deploy: $(NAME)
 %.c: $(SRC)
 
 #--- Translate into object binary. Depends on assembler code.
+%.s: %.c
+	@$(CC) $(CFLAGS) -I$(DINC) $< -o $@ -S
+	@echo "- Compiling $< into an assembler code"
+
+#--- Translate into object binary. Depends on assembler code.
 %.o: %.c
 	@$(CC) $(CFLAGS) -I$(DINC) $< -o $@ -c
-	@echo "- Translating $< into an object file"
+	@echo "- Compiling $< into an object file"
 
 #--- Assemble static library. Depends on compiled object binary.
 $(NAME): $(SRC:%.c=%.o)
 	@$(LC) $(LFLAGS) $@ $^
-	@echo "- Library(ing) $@"
 
 # **************************************************************************** #
 
 clean:
-	@rm -f **/*.o **/*.s
-	@echo "- Deleted objects$<"
+	@rm -f $(DSRC)/*.o $(DSRC)/*.s
+	@echo "- Deleted objects"
 
 fclean: clean
 	@rm -f $(NAME)
