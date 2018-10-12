@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/06 14:53:46 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/12 07:41:47 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/12 07:46:13 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,5 +15,5 @@
 
 void	ft_putstr(const char *str)
 {
-	ft_putstr_fd(1, str);
+	ft_putstr_fd(str, 1);
 }
