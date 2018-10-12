@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 19:23:29 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/12 07:40:30 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/12 08:02:51 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -65,6 +65,8 @@ char		*ft_strstr(const char *big, const char *ltl);
 ** Standard Functions
 */
 char		*ft_itoa(int x);
+void		*ft_memalloc(size_t siz);
+void		ft_memdel(void **mem);
 /*
 ** Math Functions
 */
