@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 19:23:29 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/11 16:54:17 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/12 07:33:15 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -34,7 +34,7 @@ int			ft_isxdigit(int c);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
 /*
-** 'string.h' Functions
+** Strings Functions
 */
 int			ft_atoi(const char *str);
 long		ft_atol(const char *str);
@@ -59,12 +59,17 @@ char		*ft_strncpy(char *dst, const char *src, size_t len);
 char		*ft_strnstr(const char *big, const char *ltl, size_t len);
 char		*ft_strrchr(const char *str, int c);
 char		*ft_strchr(const char *str, int c);
+char		*ft_strrev(char *str);
 char		*ft_strstr(const char *big, const char *ltl);
-
+/*
+** Standard Functions
+*/
+char		*ft_itoa(int x);
 /*
 ** Math Functions
 */
 int			ft_pow(int x, int n);
+int			ft_pow10(int n);
 /*
 ** I/O Functions
 */
