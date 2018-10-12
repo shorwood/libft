@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/13 20:45:28 by exam         #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/12 07:26:22 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/12 08:09:21 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,11 +21,11 @@ char	*ft_itoa(int x)
 	unsigned int	ux;
 
 	neg = x < 0;
-	len = neg ? 2 : 1;
+	len = neg ? 3 : 2;
 	ux = neg ? -x : x;
 	while (x /= 10)
 		len++;
-	if (!(str = (char*)malloc(len * sizeof(char))))
+	if (!(str = (char*)malloc(len-- * sizeof(char))))
 		return (str);
 	if (neg)
 		*str = '-';
