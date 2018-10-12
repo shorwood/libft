@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 19:23:29 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/12 07:33:15 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/12 07:40:30 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -79,4 +79,6 @@ void		ft_putendl(const char *str);
 void		ft_putendl_fd(const char *str, int fd);
 void		ft_putstr(const char *str);
 void		ft_putstr_fd(const char *str, int fd);
+void		ft_putnbr(int x);
+void		ft_putnbr_fd(int x, int fd);
 #endif
