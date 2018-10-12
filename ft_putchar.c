@@ -6,14 +6,14 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/16 22:03:32 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/22 02:39:57 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/12 07:44:03 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar(char c)
 {
-	write(1, &c, 1);
+	ft_putchar_fd(c, 1);
 }

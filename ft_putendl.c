@@ -6,22 +6,15 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/06 14:53:46 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/09 18:11:04 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/12 07:42:48 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putendl(const char *str)
 {
-	char *buf;
-
-	if (!str)
-		return ;
-	buf = (char*)str;
-	while (*buf)
-		buf++;
-	write(1, str, buf - str);
-	write(1, "\n", 1);
+	ft_putstr(str);
+	ft_putchar('\n');
 }
