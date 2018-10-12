@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 02:48:36 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/09 21:33:18 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/11 18:58:17 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,13 +20,9 @@ long	ft_atol(const char *str)
 	s = 1;
 	while ((*str >= '\t' && *str <= '\r') || *str == ' ')
 		str++;
-	if (*str == '+')
-		str++;
-	else if (*str == '-')
-	{
-		s = -1;
-		str++;
-	}
+	if (*str == '+' || *str == '-')
+		if (*str++ == '-')
+			s = -1;
 	while (*str >= '0' && *str <= '9')
 		x = x * 10 + *str++ - '0';
 	return (x * s);
