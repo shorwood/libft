@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../Sources/ft_memmove.c"
+#include "../ft_memmove.c"
 
 static 
 void	test_overlap(const char *msg, void *dst, size_t offset, size_t n)

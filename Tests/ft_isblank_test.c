@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 15:40:11 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/05 16:57:28 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/11 16:59:37 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include "../Sources/ft_isblank.c"
+#include "../ft_isblank.c"
 
 void	test(const char *msg)
 {

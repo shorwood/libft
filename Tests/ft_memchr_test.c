@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 22:16:39 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/07 17:27:14 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/11 17:01:13 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../Sources/ft_memchr.c"
+#include "../ft_memchr.c"
 
 void	test(char *msg, const char *str, int c, size_t n)
 {	

@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 15:40:11 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/05 16:56:43 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/09 20:54:15 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include "../Sources/ft_isascii.c"
+#include "../ft_isascii.c"
 
 void	test(const char *msg)
 {

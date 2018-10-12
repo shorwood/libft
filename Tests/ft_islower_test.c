@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 15:40:11 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/05 16:56:54 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/11 17:00:24 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include "../Sources/ft_islower.c"
+#include "../ft_islower.c"
 
 void	test(const char *msg)
 {

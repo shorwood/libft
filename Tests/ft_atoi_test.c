@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 15:40:11 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/09 16:27:08 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/09 20:53:53 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <strings.h>
-#include "../Sources/ft_atoi.c"
+#include "../ft_atoi.c"
 
 void	test(const char *msg, const char *str)
 {

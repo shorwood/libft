@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 15:40:11 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/09 09:57:26 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/11 17:01:00 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../Sources/ft_memccpy.c"
+#include "../ft_memccpy.c"
 
 static 
 void	test_overlap(const char *msg, void *dst, int c, size_t offset, size_t n)
