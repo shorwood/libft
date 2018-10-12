@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 19:23:29 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/12 08:02:51 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/12 08:28:14 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -48,14 +48,17 @@ void		*ft_memmove(void *dst, const void *src, size_t len);
 void		*ft_memset(void *mem, int c, size_t len);
 char		*ft_strcat(char *dst, const char *src);
 char		*ft_strchr(const char *str, int c);
+void		ft_strclr(char *str);
 int			ft_strcmp(const char *str, const char *cmp);
 char		*ft_strcpy(char *dst, const char *src);
+void		ft_strdel(char **str);
 char		*ft_strdup(const char *str);
 size_t		ft_strlcat(char *dst, const char *src, size_t len);
 size_t		ft_strlen(const char *str);
 char		*ft_strncat(char *dst, const char *src, size_t n);
 int			ft_strncmp(const char *str, const char *cmp, size_t len);
 char		*ft_strncpy(char *dst, const char *src, size_t len);
+char		*ft_strnew(size_t len);
 char		*ft_strnstr(const char *big, const char *ltl, size_t len);
 char		*ft_strrchr(const char *str, int c);
 char		*ft_strchr(const char *str, int c);
