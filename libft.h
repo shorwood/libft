@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 19:23:29 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/12 08:28:14 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/12 08:54:09 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -53,8 +53,12 @@ int			ft_strcmp(const char *str, const char *cmp);
 char		*ft_strcpy(char *dst, const char *src);
 void		ft_strdel(char **str);
 char		*ft_strdup(const char *str);
+void		ft_striter(char *str, void (*fnc)(char*));
+void		ft_striteri(char *str, void (*fnc)(unsigned int, char*));
 size_t		ft_strlcat(char *dst, const char *src, size_t len);
 size_t		ft_strlen(const char *str);
+char		*ft_strmap(char const *str, char (*fnc)(char));
+char		*ft_strmapi(char const *str, char (*fnc)(unsigned int, char));
 char		*ft_strncat(char *dst, const char *src, size_t n);
 int			ft_strncmp(const char *str, const char *cmp, size_t len);
 char		*ft_strncpy(char *dst, const char *src, size_t len);
