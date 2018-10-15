@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 19:23:29 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/15 22:58:59 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/16 00:16:10 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -39,13 +39,13 @@ int					ft_toupper(int c);
 int					ft_atoi(const char *str);
 long				ft_atol(const char *str);
 long long			ft_atoll(const char *str);
-void				*ft_bzero(void *mem, size_t len);
+void				ft_bzero(void *ptr, size_t len);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t len);
-void				*ft_memchr(const void *mem, int byt, size_t len);
-int					ft_memcmp(const void *mem, const void *cmp, size_t len);
+void				*ft_memchr(const void *ptr, int byt, size_t len);
+int					ft_memcmp(const void *ptr, const void *cmp, size_t len);
 void				*ft_memcpy(void *dst, const void *src, size_t len);
 void				*ft_memmove(void *dst, const void *src, size_t len);
-void				*ft_memset(void *mem, int c, size_t len);
+void				*ft_memset(void *ptr, int c, size_t len);
 char				*ft_strcat(char *dst, const char *src);
 char				*ft_strchr(const char *str, int c);
 void				ft_strclr(char *str);
@@ -79,7 +79,7 @@ char				*ft_strtrim(char const *str);
 */
 char				*ft_itoa(int x);
 void				*ft_memalloc(size_t siz);
-void				ft_memdel(void **mem);
+void				ft_memdel(void **ptr);
 void				*ft_malloc(size_t siz);
 void				*ft_realloc(void *ptr, size_t siz);
 void				*ft_calloc(size_t cnt, size_t siz);
