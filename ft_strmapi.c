@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/12 08:44:40 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/15 14:03:46 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/15 20:58:09 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,6 +20,8 @@ char	*ft_strmapi(char const *str, char (*fnc)(unsigned int, char))
 	size_t			len;
 	unsigned int	idx;
 
+	if (!str || !fnc)
+		return (char*)(0x00);
 	buf = (char*)str;
 	len = 0UL;
 	while (*buf++)

@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/15 13:12:52 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/15 17:35:34 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/15 20:16:47 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -48,6 +48,8 @@ char		**ft_strsplit(char const *str, char c)
 	char	**wrd;
 	size_t	len;
 
+	if (!str)
+		return (NULL);
 	while (*str && *str == c)
 		str++;
 	len = *str ? 2UL : 1UL;

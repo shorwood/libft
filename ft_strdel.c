@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/12 07:55:49 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/12 08:25:49 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/15 21:08:53 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,6 +15,8 @@
 
 void	ft_strdel(char **str)
 {
+	if (!str || !*str)
+		return ;
 	free(*str);
 	*str = NULL;
 }

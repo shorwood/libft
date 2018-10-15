@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/12 07:55:49 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/12 08:28:35 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/15 23:26:31 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,6 +15,8 @@ void	ft_strclr(char *str)
 {
 	char *buf;
 
+	if (!str)
+		return ;
 	buf = str;
 	while (*buf)
 		buf++;

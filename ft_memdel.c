@@ -6,15 +6,17 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/12 07:55:49 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/12 08:03:49 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/15 20:44:45 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	ft_memdel(void **mem)
+void	ft_memdel(void **ptr)
 {
-	free(*mem);
-	*mem = NULL;
+	if (!ptr || !*ptr)
+		return ;
+	free(*ptr);
+	*ptr = NULL;
 }

@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/12 09:25:35 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/15 13:08:38 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/15 23:01:14 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -28,6 +28,8 @@ char		*ft_strtrim(char const *str)
 	char	*buf;
 	size_t	len;
 
+	if (!str)
+		return (char*)(str);
 	while (*str == ' ' || *str == '\n' || *str == '\t')
 		str++;
 	if (!*str)
