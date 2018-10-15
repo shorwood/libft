@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 19:23:29 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/12 08:54:09 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/15 13:41:05 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -53,8 +53,11 @@ int			ft_strcmp(const char *str, const char *cmp);
 char		*ft_strcpy(char *dst, const char *src);
 void		ft_strdel(char **str);
 char		*ft_strdup(const char *str);
+int			ft_strequ(const char *str, const char *equ);
+int			ft_strnequ(const char *str, const char *equ, size_t len);
 void		ft_striter(char *str, void (*fnc)(char*));
 void		ft_striteri(char *str, void (*fnc)(unsigned int, char*));
+char		*ft_strjoin(char const *dst, char const *src);
 size_t		ft_strlcat(char *dst, const char *src, size_t len);
 size_t		ft_strlen(const char *str);
 char		*ft_strmap(char const *str, char (*fnc)(char));
@@ -68,12 +71,17 @@ char		*ft_strrchr(const char *str, int c);
 char		*ft_strchr(const char *str, int c);
 char		*ft_strrev(char *str);
 char		*ft_strstr(const char *big, const char *ltl);
+char		*ft_strsub(char const *str, unsigned int beg, size_t len);
+char		*ft_strtrim(char const *str);
 /*
 ** Standard Functions
 */
 char		*ft_itoa(int x);
 void		*ft_memalloc(size_t siz);
 void		ft_memdel(void **mem);
+void		*ft_malloc(size_t siz);
+void		*ft_realloc(void *ptr, size_t siz);
+void		*ft_calloc(size_t cnt, size_t siz);
 /*
 ** Math Functions
 */

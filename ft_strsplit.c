@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strmapi.c                                     .::    .:/ .      .::   */
+/*   ft_strsplit.c                                    .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/12 08:44:40 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/15 14:03:46 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/15 13:12:52 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/15 14:04:54 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strmapi(char const *str, char (*fnc)(unsigned int, char))
-{
-	char			*map;
-	char			*buf;
-	size_t			len;
-	unsigned int	idx;
+static char *
 
-	buf = (char*)str;
-	len = 0UL;
-	while (*buf++)
-		len++;
-	if (!(map = (char*)malloc(++len * sizeof(char))))
-		return (map);
-	buf = map;
-	idx = 0U;
-	while (*str)
-		*buf++ = fnc(idx++, *str++);
-	*buf = '\0';
-	return (map);
+char	**ft_strsplit(char const *str, char c)
+{
+	char	*buf;
+	char	**arr;
+	size_t	n;
+
+	if (*str == c)
+	while (*str == c)
+
 }

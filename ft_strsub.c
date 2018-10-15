@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strmapi.c                                     .::    .:/ .      .::   */
+/*   ft_strsub.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/12 08:44:40 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/15 14:03:46 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/12 09:05:38 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/12 09:11:55 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strmapi(char const *str, char (*fnc)(unsigned int, char))
+char	*ft_strsub(char const *str, unsigned int beg, size_t len)
 {
-	char			*map;
-	char			*buf;
-	size_t			len;
-	unsigned int	idx;
+	char *sub;
+	char *buf;
 
-	buf = (char*)str;
-	len = 0UL;
-	while (*buf++)
-		len++;
-	if (!(map = (char*)malloc(++len * sizeof(char))))
-		return (map);
-	buf = map;
-	idx = 0U;
-	while (*str)
-		*buf++ = fnc(idx++, *str++);
+	while (beg--)
+		str++;
+	if (!(sub = (char*)malloc(++len * sizeof(char))))
+		return (sub);
+	buf = sub;
+	while (--len)
+		*buf++ = *(char*)str++;
 	*buf = '\0';
-	return (map);
+	return (sub);
 }

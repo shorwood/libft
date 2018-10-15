@@ -1,35 +1,22 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strmapi.c                                     .::    .:/ .      .::   */
+/*   ft_strnequ.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/12 08:44:40 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/15 14:03:46 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/09 22:08:58 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/12 09:03:55 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strmapi(char const *str, char (*fnc)(unsigned int, char))
+int		ft_strnequ(const char *str, const char *equ, size_t len)
 {
-	char			*map;
-	char			*buf;
-	size_t			len;
-	unsigned int	idx;
-
-	buf = (char*)str;
-	len = 0UL;
-	while (*buf++)
-		len++;
-	if (!(map = (char*)malloc(++len * sizeof(char))))
-		return (map);
-	buf = map;
-	idx = 0U;
-	while (*str)
-		*buf++ = fnc(idx++, *str++);
-	*buf = '\0';
-	return (map);
+	while ((*str || *equ) && len--)
+		if (*str++ != *equ++)
+			return (0);
+	return (1);
 }
