@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/12 07:55:49 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/12 08:01:30 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/15 13:55:00 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,11 +15,13 @@
 
 void	*ft_memalloc(size_t siz)
 {
-	void *mem;
+	void	*ptr;
+	uint8_t	*buf;
 
-	if (!(mem = malloc(siz)))
-		return (mem);
+	if (!(ptr = malloc(siz)))
+		return (ptr);
+	buf = (uint8_t*)ptr;
 	while (siz--)
-		*(uint8_t*)(mem + siz) = 0;
-	return (mem);
+		*buf++ = 0x00;
+	return (ptr);
 }
