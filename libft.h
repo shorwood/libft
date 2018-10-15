@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 19:23:29 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/15 13:41:05 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/15 17:39:33 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -70,6 +70,7 @@ char		*ft_strnstr(const char *big, const char *ltl, size_t len);
 char		*ft_strrchr(const char *str, int c);
 char		*ft_strchr(const char *str, int c);
 char		*ft_strrev(char *str);
+char		**ft_strsplit(char const *str, char c);
 char		*ft_strstr(const char *big, const char *ltl);
 char		*ft_strsub(char const *str, unsigned int beg, size_t len);
 char		*ft_strtrim(char const *str);
@@ -99,3 +100,12 @@ void		ft_putstr_fd(const char *str, int fd);
 void		ft_putnbr(int x);
 void		ft_putnbr_fd(int x, int fd);
 #endif
+/*
+** List Functions
+*/
+typedef struct s_list
+{
+	void 		*content;
+	size_t 		content_size;
+	struct 		s_list *next;
+} 				t_list;
