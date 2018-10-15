@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/15 17:41:54 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/15 20:32:32 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/16 00:26:18 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,11 +16,16 @@
 
 void	ft_lstdel(t_list **lst, void (*fnc)(void*, size_t))
 {
+	t_list *buf;
+
 	if (!lst || !fnc)
 		return ;
-	if ((*lst)->next)
-		ft_lstdel(&(*lst)->next, fnc);
-	fnc((*lst)->content, (*lst)->content_size);
-	free(*lst);
+	while (*lst)
+	{
+		buf = (*lst)->next;
+		fnc((*lst)->content, (*lst)->content_size);
+		free(*lst);
+		*lst = buf;
+	}
 	*lst = (t_list*)0;
 }
