@@ -6,14 +6,14 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/15 13:12:52 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/15 13:30:15 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/15 20:41:55 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void		*ft_malloc(size_t siz)
+void	*ft_malloc(size_t siz)
 {
 	return (malloc(siz));
 }
