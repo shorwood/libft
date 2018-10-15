@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/15 13:12:52 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/15 13:54:45 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/15 17:25:24 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,7 @@
 
 void	*ft_calloc(size_t cnt, size_t siz)
 {
-	void 	*ptr;
+	void	*ptr;
 	uint8_t	*buf;
 
 	siz *= cnt;
