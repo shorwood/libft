@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/09 18:51:25 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/07 12:19:54 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/15 22:55:46 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -18,7 +18,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t len)
 	char	*buf;
 	size_t	ret;
 
-	ret = 0;
+	ret = 0UL;
 	buf = (char*)src;
 	while (*buf++)
 		ret++;
