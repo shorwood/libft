@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 19:23:29 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/16 00:16:10 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/16 06:02:08 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -64,6 +64,7 @@ char				*ft_strmap(char const *str, char (*fnc)(char));
 char				*ft_strmapi(char const *str, char(*f)(unsigned int, char));
 char				*ft_strncat(char *dst, const char *src, size_t n);
 int					ft_strncmp(const char *str, const char *cmp, size_t len);
+char				*ft_strndup(const char *str, size_t len);
 char				*ft_strncpy(char *dst, const char *src, size_t len);
 char				*ft_strnew(size_t len);
 char				*ft_strnstr(const char *big, const char *ltl, size_t len);
