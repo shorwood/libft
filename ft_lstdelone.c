@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/15 17:41:54 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/15 20:26:15 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/17 17:41:21 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,7 +16,7 @@
 
 void	ft_lstdelone(t_list **lst, void (*fnc)(void*, size_t))
 {
-	if (!lst || !fnc)
+	if (!lst || !*lst || !fnc)
 		return ;
 	fnc((*lst)->content, (*lst)->content_size);
 	free(*lst);
