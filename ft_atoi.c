@@ -6,24 +6,27 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 02:48:36 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/11 18:58:13 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/17 19:02:56 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int		ft_atoi(const char *str)
 {
-	int	x;
-	int	s;
+	int		ret;
+	bool_t	neg;
 
-	x = 0;
-	s = 1;
-	while ((*str >= '\t' && *str <= '\r') || *str == ' ')
+	if (!str)
+		return (0);
+	ret = 0;
+	neg = 0;
+	while (ft_isspace(*str))
 		str++;
 	if (*str == '+' || *str == '-')
-		if (*str++ == '-')
-			s = -1;
-	while (*str >= '0' && *str <= '9')
-		x = x * 10 + *str++ - '0';
-	return (x * s);
+		neg = *str++ == '-';
+	while (ft_isdigit(*str))
+		ret = ret * 10 + *str++ - '0';
+	return (neg ? -ret : ret);
 }
