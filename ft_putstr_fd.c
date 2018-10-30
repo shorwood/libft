@@ -6,12 +6,12 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/06 14:53:46 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/15 20:46:10 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/17 19:10:22 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putstr_fd(const char *str, int fd)
 {
@@ -22,5 +22,5 @@ void	ft_putstr_fd(const char *str, int fd)
 	buf = (char*)str;
 	while (*buf)
 		buf++;
-	write(fd, str, buf - str);
+	ft_write(fd, str, buf - str);
 }
