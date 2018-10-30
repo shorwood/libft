@@ -6,7 +6,7 @@
 #    By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/07/16 12:26:44 by shorwood     #+#   ##    ##    #+#        #
-#    Updated: 2018/10/17 19:01:21 by shorwood    ###    #+. /#+    ###.fr      #
+#    Updated: 2018/10/29 18:50:42 by shorwood    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -49,8 +49,7 @@ deploy: all clean
 
 #--- Assemble static library. Depends on compiled object binary.
 $(NAME): $(SRC:%.c=%.o)
-	@$(LC) $(LFLAGS) $@ $^
-
+	$(LC) $(LFLAGS) $@ $?
 # **************************************************************************** #
 
 clean:
