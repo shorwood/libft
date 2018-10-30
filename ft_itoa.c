@@ -6,32 +6,32 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/13 20:45:28 by exam         #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/12 08:09:21 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/17 19:12:56 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_itoa(int x)
 {
 	char			*str;
-	int				len;
-	int				neg;
-	unsigned int	ux;
+	bool_t			neg;
+	unsigned int	len;
+	unsigned int	nbr;
 
 	neg = x < 0;
-	len = neg ? 3 : 2;
-	ux = neg ? -x : x;
+	len = neg ? 3U : 2U;
+	nbr = neg ? -x : x;
 	while (x /= 10)
 		len++;
-	if (!(str = (char*)malloc(len-- * sizeof(char))))
+	if (!(str = (char*)ft_malloc(len-- * sizeof(char))))
 		return (str);
 	if (neg)
 		*str = '-';
 	*(str + len--) = '\0';
-	*(str + len--) = ux % 10 + '0';
-	while (ux /= 10)
-		*(str + len--) = ux % 10 + '0';
+	*(str + len--) = nbr % 10 + '0';
+	while (nbr /= 10)
+		*(str + len--) = nbr % 10 + '0';
 	return (str);
 }
