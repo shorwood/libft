@@ -6,15 +6,17 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/09 22:08:58 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/16 00:41:42 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/17 19:04:16 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	ft_bzero(void *ptr, size_t len)
 {
+	if (!ptr)
+		return ;
 	while (len--)
 		*(uint8_t*)ptr++ = 0x00;
 }
