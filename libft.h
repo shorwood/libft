@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 19:23:29 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/16 06:08:30 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/11/04 02:55:37 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,9 +14,19 @@
 #ifndef _LIBFT_H
 # define _LIBFT_H
 # include <stdlib.h>
-
 /*
-** 'ctype.h' Functions
+**  Type Definitions
+*/
+typedef	int					bool_t;
+typedef	unsigned char		uint8_t;
+typedef	unsigned short		uint16_t;
+typedef	unsigned int		uint32_t;
+typedef	unsigned long long	uint64_t;
+
+typedef	unsigned long		size_t;
+typedef	signed long			ssize_t;
+/*
+** ASCII Character Type Functions
 */
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
@@ -37,8 +47,6 @@ int					ft_toupper(int c);
 ** Strings Functions
 */
 int					ft_atoi(const char *str);
-long				ft_atol(const char *str);
-long long			ft_atoll(const char *str);
 void				ft_bzero(void *ptr, size_t len);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t len);
 void				*ft_memchr(const void *ptr, int byt, size_t len);
@@ -58,6 +66,7 @@ int					ft_strnequ(const char *str, const char *equ, size_t len);
 void				ft_striter(char *str, void (*fnc)(char*));
 void				ft_striteri(char *str, void (*fnc)(unsigned int, char*));
 char				*ft_strjoin(char const *dst, char const *src);
+char				*ft_strnjoin(char const *s1, char const *s2, size_t len);
 size_t				ft_strlcat(char *dst, const char *src, size_t len);
 size_t				ft_strlen(const char *str);
 char				*ft_strmap(char const *str, char (*fnc)(char));
@@ -78,17 +87,18 @@ char				*ft_strtrim(char const *str);
 /*
 ** Standard Functions
 */
+ssize_t				ft_write(int fd, const void *buf, ssize_t len);
 char				*ft_itoa(int x);
 void				*ft_memalloc(size_t siz);
 void				ft_memdel(void **ptr);
+void				ft_free(void *ptr);
 void				*ft_malloc(size_t siz);
 void				*ft_realloc(void *ptr, size_t siz);
 void				*ft_calloc(size_t cnt, size_t siz);
 /*
 ** Math Functions
 */
-int					ft_pow(int x, int n);
-int					ft_pow10(int n);
+int					ft_powi(int x, unsigned int n);
 /*
 ** I/O Functions
 */
@@ -100,6 +110,8 @@ void				ft_putstr(const char *str);
 void				ft_putstr_fd(const char *str, int fd);
 void				ft_putnbr(int x);
 void				ft_putnbr_fd(int x, int fd);
+void				ft_putbits_fd(size_t siz, const void *ptr, int fd);
+void				ft_putbits(size_t siz, const void *ptr);
 /*
 ** List Functions
 */
