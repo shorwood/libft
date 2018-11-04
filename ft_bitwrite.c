@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/11/04 03:44:19 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/04 04:38:28 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/11/04 04:41:03 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -18,5 +18,5 @@ void		ft_bitwrite(uint8_t *ptr, int i, int val)
 	if (val)
 		ft_bitset(ptr, i);
 	else
-		ft_bitclear(ptr, i);
+		ft_bitclr(ptr, i);
 }
