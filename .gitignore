@@ -1,13 +1,10 @@
-#--- Ignore everything.
 *
+
+#--- Include documentation and git files.
 !.gitignore
-
-#--- Include tests & documentation.
-!*.md
-!*.pdf
-
-#--- Include files to render.
-!*.h
-!*.c
-!Makefile
 !auteur
+!*.md
+
+#--- Include project files.
+!**/*.c
+!**/*.h
