@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_putbits.c                                     .::    .:/ .      .::   */
+/*   ft_bitread.c                                         .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/16 22:03:32 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/04 05:29:02 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/11/04 03:44:19 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/11/04 05:34:56 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putbits(const void *ptr, size_t siz)
+int		ft_bitread(uint8_t byte, int i)
 {
-    ft_putbits_fd(ptr, siz, 1);
+	return ((byte >> i) & 1);
 }

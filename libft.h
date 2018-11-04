@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 19:23:29 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/04 04:40:37 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/11/04 05:38:10 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -39,8 +39,9 @@ int					ft_toupper(int c);
 /*
 ** Bit Manipulation Functions
 */
+int					ft_bitread(uint8_t byte, int i);
 void				ft_bitset(uint8_t *ptr, int i);
-void				ft_bitclr(uint8_t *ptr, int i);
+void				ft_bitclear(uint8_t *ptr, int i);
 void				ft_bitwrite(uint8_t *ptr, int i, int val);
 /*
 ** Strings Functions
@@ -109,8 +110,8 @@ void				ft_putstr(const char *str);
 void				ft_putstr_fd(const char *str, int fd);
 void				ft_putnbr(int x);
 void				ft_putnbr_fd(int x, int fd);
-void				ft_putbits_fd(size_t siz, const void *ptr, int fd);
-void				ft_putbits(size_t siz, const void *ptr);
+void				ft_putbits(const void *ptr, size_t siz);
+void				ft_putbits_fd(const void *ptr, size_t siz, int fd);
 /*
 ** List Functions
 */

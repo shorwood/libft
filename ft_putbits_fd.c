@@ -6,14 +6,14 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/16 22:03:32 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/04 00:11:53 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/11/04 05:28:03 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putbits_fd(size_t siz, const void *ptr, int fd)
+void	ft_putbits_fd(const void *ptr, size_t siz, int fd)
 {
     uint8_t *buf = (uint8_t*)ptr;
 	int		i;
