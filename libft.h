@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 19:23:29 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/04 04:38:53 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/11/04 04:40:37 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -39,7 +39,7 @@ int					ft_toupper(int c);
 /*
 ** Bit Manipulation Functions
 */
-void				ft_bitset(uint8_t *ptr, int i;
+void				ft_bitset(uint8_t *ptr, int i);
 void				ft_bitclr(uint8_t *ptr, int i);
 void				ft_bitwrite(uint8_t *ptr, int i, int val);
 /*
