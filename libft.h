@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 19:23:29 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/04 02:55:37 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/11/04 04:38:53 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,17 +14,10 @@
 #ifndef _LIBFT_H
 # define _LIBFT_H
 # include <stdlib.h>
+# include <unistd.h>
 /*
 **  Type Definitions
 */
-typedef	int					bool_t;
-typedef	unsigned char		uint8_t;
-typedef	unsigned short		uint16_t;
-typedef	unsigned int		uint32_t;
-typedef	unsigned long long	uint64_t;
-
-typedef	unsigned long		size_t;
-typedef	signed long			ssize_t;
 /*
 ** ASCII Character Type Functions
 */
@@ -43,6 +36,12 @@ int					ft_isupper(int c);
 int					ft_isxdigit(int c);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
+/*
+** Bit Manipulation Functions
+*/
+void				ft_bitset(uint8_t *ptr, int i;
+void				ft_bitclr(uint8_t *ptr, int i);
+void				ft_bitwrite(uint8_t *ptr, int i, int val);
 /*
 ** Strings Functions
 */
@@ -65,7 +64,7 @@ int					ft_strequ(const char *str, const char *equ);
 int					ft_strnequ(const char *str, const char *equ, size_t len);
 void				ft_striter(char *str, void (*fnc)(char*));
 void				ft_striteri(char *str, void (*fnc)(unsigned int, char*));
-char				*ft_strjoin(char const *dst, char const *src);
+char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strnjoin(char const *s1, char const *s2, size_t len);
 size_t				ft_strlcat(char *dst, const char *src, size_t len);
 size_t				ft_strlen(const char *str);
