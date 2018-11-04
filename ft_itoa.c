@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/13 20:45:28 by exam         #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/17 19:12:56 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/11/04 04:02:59 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,8 +16,8 @@
 char	*ft_itoa(int x)
 {
 	char			*str;
-	bool_t			neg;
-	unsigned int	len;
+	int				neg;
+	int				len;
 	unsigned int	nbr;
 
 	neg = x < 0;
