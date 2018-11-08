@@ -6,7 +6,7 @@
 #    By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/07/16 12:26:44 by shorwood     #+#   ##    ##    #+#        #
-#    Updated: 2018/11/04 05:29:25 by shorwood    ###    #+. /#+    ###.fr      #
+#    Updated: 2018/11/08 16:10:14 by shorwood    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -16,6 +16,7 @@ NAME	= libft.a
 CC		= gcc -Wall -Werror -Wextra 
 AR		= ar rus
 DOBJ	= build
+DINC	= -I includes
 DASM	= asm
 DSRC	= .
 
@@ -39,7 +40,7 @@ asm: $(ASM)
 
 #--- Compile into assembler code. Depends on source code.
 $(DASM)/%.s: %.c
-	@$(CC) $< -o $@ -S
+	@$(CC) $(DINC) $< -o $@ -S
 	@echo "• Compiling $< into assembler code"
 
 # **************************************************************************** #
@@ -47,7 +48,7 @@ $(DASM)/%.s: %.c
 #--- Compile into an object binary. Depends on source code.
 $(DOBJ)/%.o: %.c
 	@mkdir -p $(DOBJ)
-	@$(CC) $< -o $@ -c
+	@$(CC) $(DINC) $< -o $@ -c
 	@echo "• Compiling $< into an object"
 
 #--- Assemble static library. Depends on compiled object binary.
