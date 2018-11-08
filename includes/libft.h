@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 19:23:29 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/04 05:38:10 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/11/08 14:44:36 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -84,6 +84,8 @@ char				**ft_strsplit(char const *str, char c);
 char				*ft_strstr(const char *big, const char *ltl);
 char				*ft_strsub(char const *str, unsigned int beg, size_t len);
 char				*ft_strtrim(char const *str);
+size_t				ft_strcspn(const char *str, const char *spn);
+size_t				ft_strspn(const char *str, const char *spn);
 /*
 ** Standard Functions
 */

@@ -6,5 +6,6 @@
 !*.md
 
 #--- Include project files.
+!includes
 !**/*.c
 !**/*.h
