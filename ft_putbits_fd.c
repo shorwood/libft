@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/16 22:03:32 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/04 05:28:03 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/11/08 10:06:50 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -22,6 +22,6 @@ void	ft_putbits_fd(const void *ptr, size_t siz, int fd)
 	{
 		i = 8;
 		while (i)
-			ft_putchar_fd(((buf[siz] >> --i) & 0b00000001) + '0', fd);
+			ft_putchar_fd((buf[siz] >> --i) & 1 ? '1' : '0', fd);
 	}
 }
