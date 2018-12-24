@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/12 07:55:49 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/17 19:14:16 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/12/21 04:14:37 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,6 +17,6 @@ void	ft_memdel(void **ptr)
 {
 	if (!ptr || !*ptr)
 		return ;
-	ft_free(*ptr);
+	free(*ptr);
 	*ptr = NULL;
 }

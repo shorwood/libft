@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/12 09:05:38 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/07 11:36:07 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/12/21 04:14:50 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -30,7 +30,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	buf = (char*)s2;
 	while (*buf++)
 		len++;
-	if (!(str = (char*)ft_malloc(++len * sizeof(char))))
+	if (!(str = (char*)malloc(++len * sizeof(char))))
 		return (NULL);
 	buf = str;
 	while (*s1)
