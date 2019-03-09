@@ -6,7 +6,7 @@
 #    By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/07/16 12:26:44 by shorwood     #+#   ##    ##    #+#        #
-#    Updated: 2019/03/09 15:29:40 by shorwood    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/03/09 15:33:52 by shorwood    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -18,7 +18,7 @@ AR		= ar rus
 DSRC	= src
 DINC	= includes
 DOBJ	= build
-DBIN	= bin
+DBIN	= .
 DASM	= asm
 
 #--- Set source project dependencies.
