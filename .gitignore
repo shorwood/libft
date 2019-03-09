@@ -9,3 +9,5 @@
 !includes
 !**/*.c
 !**/*.h
+
+libft.c
