@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 02:48:36 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/11/04 04:01:41 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/12/24 12:41:27 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,8 +15,8 @@
 
 int		ft_atoi(const char *str)
 {
-	int		ret;
-	int		neg;
+	int	ret;
+	int	neg;
 
 	if (!str)
 		return (0);

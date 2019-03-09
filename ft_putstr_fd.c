@@ -6,21 +6,21 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/06 14:53:46 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/17 19:10:22 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/12/21 02:57:58 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
 void	ft_putstr_fd(const char *str, int fd)
 {
-	char *buf;
+	const char *buf;
 
 	if (!str)
 		return ;
 	buf = (char*)str;
 	while (*buf)
 		buf++;
-	ft_write(fd, str, buf - str);
+	write(fd, str, buf - str);
 }
