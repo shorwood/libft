@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_lstiter.c                                     .::    .:/ .      .::   */
+/*   ft_lstinew.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/15 17:57:57 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/12/24 11:48:06 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/15 17:41:54 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2018/12/24 09:36:27 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-void	ft_lstiter(t_list **lst, void (*fnc)(void *data))
+t_list	*ft_lstinew(const void *ptr, const t_list *nxt)
 {
-	t_list *cur;
+	t_list	*new;
 
-	if (!lst || !fnc)
-		return ;
-	cur = *lst;
-	while (cur)
-	{
-		fnc(cur->data);
-		cur = cur->next;
-	}
+	if (!(new = (t_list*)malloc(sizeof(t_list))))
+		return (NULL);
+	new->data = (void*)ptr;
+	new->next = (void*)nxt;
+	return (new);
 }

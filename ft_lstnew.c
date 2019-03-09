@@ -6,31 +6,32 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/15 17:41:54 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/30 01:18:11 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/12/24 12:24:21 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
+#include <stdlib.h>
+#include <stdarg.h>
 #include "libft.h"
 
-t_list	*ft_lstnew(void const *data, size_t siz)
+t_list	**ft_lstnew(size_t len, ...)
 {
-	t_list	*new;
+    va_list	args;
+	t_list	**new;
+	t_list	*cur;
 
-	if (!(new = (t_list*)ft_malloc(sizeof(t_list))))
+	if (!(new = (t_list**)malloc(sizeof(t_list*))))
 		return (NULL);
-	if (data)
-	{
-		new->content_size = siz;
-		new->content = ft_malloc(siz);
-		if (new->content)
-			ft_memcpy(new->content, data, siz);
-	}
-	else
-	{
-		new->content = NULL;
-		new->content_size = 0;
-	}
-	new->next = NULL;
+	*new = NULL;
+	if (!len)
+		return (new);
+	va_start(args, len);
+	if (!(*new = cur = ft_lstinew(va_arg(args, void*), NULL)))
+		return (new);
+	while (--len)
+		if (!(cur = cur->next = ft_lstinew(va_arg(args, void*), NULL)))
+			break;
+	va_end(args);
 	return (new);
 }
