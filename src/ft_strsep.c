@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/09 18:51:25 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/12/24 17:33:47 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/03/09 20:02:36 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,10 +19,10 @@ char	*ft_strsep(char **str, const char *sep)
 	char	*ret;
 	char	*ptr;
 
-	if (!str || !*str)
+	if (!str || !*str || !sep)
 		return (NULL);
 	ret = *str;
-	while (*str)
+	while (**str)
 	{
 		ptr = (char*)sep;
 		while (*ptr)
