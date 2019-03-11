@@ -3,12 +3,14 @@
 #--- Include documentation and git files.
 !.gitignore
 !auteur
-!*.md
+!README.md
+!Makefile
+!.vscode/
+!.vscode/*
 
 #--- Include project files.
 !includes
 !src
+!test
 !**/*.c
 !**/*.h
-
-libft.c
