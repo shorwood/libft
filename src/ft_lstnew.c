@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/15 17:41:54 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/12/24 12:24:21 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/03/11 21:31:23 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,7 +17,7 @@
 
 t_list	**ft_lstnew(size_t len, ...)
 {
-    va_list	args;
+	va_list	args;
 	t_list	**new;
 	t_list	*cur;
 
@@ -31,7 +31,7 @@ t_list	**ft_lstnew(size_t len, ...)
 		return (new);
 	while (--len)
 		if (!(cur = cur->next = ft_lstinew(va_arg(args, void*), NULL)))
-			break;
+			break ;
 	va_end(args);
 	return (new);
 }

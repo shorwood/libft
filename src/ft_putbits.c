@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/16 22:03:32 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/12/21 03:08:41 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/03/11 21:33:14 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,9 +15,10 @@
 
 void	ft_putbits(const void *ptr, size_t siz)
 {
-    uint8_t *buf = (uint8_t*)ptr;
+	uint8_t *buf;
 	int		i;
 
+	buf = (uint8_t*)ptr;
 	while (siz--)
 	{
 		i = 8;

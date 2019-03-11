@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/15 17:57:57 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/12/24 12:27:11 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/03/11 21:30:32 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -27,6 +27,6 @@ t_list	**ft_lstmap(t_list **lst, void *(*fnc)(void *data))
 		return (map);
 	while ((cur = cur->next))
 		if (!(new = new->next = ft_lstinew(fnc(cur->data), NULL)))
-			break;
+			break ;
 	return (map);
 }
