@@ -73,7 +73,9 @@
 			"label": "norm",
 			"type": "shell",
 			"command": "norminette",
-			"args": [],
+			"args": [
+				"src/*.c"
+			],
 			"problemMatcher": {
 				"owner": "cpp",
 				"fileLocation": [
