@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 19:23:29 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/12/24 16:23:03 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/03/14 01:10:46 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -117,8 +117,6 @@ typedef struct		s_list
 {
 	void			*data;
 	struct s_list	*next;
-	int				type;
-	int				index;
 }					t_list;
 
 typedef	t_list		*t_lsti;
@@ -133,6 +131,8 @@ t_list				*ft_lstadd(t_list **lst, const void *ptr);
 t_list				*ft_lstpush(t_list **lst, const void *ptr);
 void				*ft_lstpop(t_list **lst);
 void				*ft_lstshift(t_list **lst);
+t_list				**ft_lstsplit(t_list** lst, size_t i);
+t_list				**ft_lstsplice(t_list** lst, size_t i, size_t n);
 
 t_list				*ft_lstlast(t_list **lst);
 size_t				ft_lstlen(t_list **lst);
@@ -149,23 +149,15 @@ int					ft_lststr(t_list **lst, const char *str);
 char				*ft_lstcat(t_list **lst);
 char				*ft_lstjoin(t_list **lst, const char *sep);
 
-/*char				*ft_lstistr()*/
 
 /*------------------*/
 /*
 
 
-size_t				*ft_lstindex(t_list **lst, t_list *itm);
-int					ft_lstdel(t_list **lst, t_list *itm);
-int					ft_lstdelat(t_list **lst, size_t idx);
-
-t_list				*ft_lstitm(t_list **lst, size_t idx);
-
+size_t				*ft_lstidx(t_list **lst, t_list *lsti);
 t_list				*ft_lstset(t_list **lst, size_t idx, const void *ptr);
 void				*ft_lstget(t_list **lst, size_t idx);
-
-
-t_list				**ft_lstfilter(t_list **lst, int (*fnc)(t_list *elm));
+t_list				**ft_lstfltr(t_list **lst, int (*fnc)(t_list *lsti));
 
 */
 #endif
