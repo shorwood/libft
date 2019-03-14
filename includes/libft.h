@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 19:23:29 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2019/03/14 01:10:46 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/03/14 04:00:47 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -136,18 +136,22 @@ t_list				**ft_lstsplice(t_list** lst, size_t i, size_t n);
 
 t_list				*ft_lstlast(t_list **lst);
 size_t				ft_lstlen(t_list **lst);
+//t_list				*ft_lstset(t_list **lst, size_t idx, const void *ptr);
+void				*ft_lstget(t_list **lst, size_t idx);
 
 void				ft_lstiter(t_list **lst, void (*fnc)(void *dat));
 void				ft_lstiteri(t_list **lst, void (*fnc)(void *dat, size_t));
 t_list				**ft_lstmap(t_list **lst, void *(*fnc)(void *dat));
 t_list				**ft_lstdup(t_list **lst);
 t_list				**ft_lstcpy(t_list **lst);
+t_list				**ft_lstrev(t_list **lst);
 int					ft_lstacc(t_list **lst, int (*fnc)(void *dat));
 int					ft_lstfind(t_list **lst, int (*fnc)(void *dat));
 int					ft_lststr(t_list **lst, const char *str);
 
 char				*ft_lstcat(t_list **lst);
 char				*ft_lstjoin(t_list **lst, const char *sep);
+
 
 
 /*------------------*/
