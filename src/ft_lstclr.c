@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/15 17:41:54 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2019/03/14 00:17:55 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/03/14 04:48:44 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,6 +17,7 @@
 #define FT_LCLR_DATA 0b001
 #define FT_LCLR_ITEM 0b010
 #define FT_LCLR_LIST 0b100
+#define FT_LCLR_ALL 0b111
 
 void	ft_lstclr(t_list **lst, int flg)
 {
