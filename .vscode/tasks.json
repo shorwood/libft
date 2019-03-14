@@ -18,10 +18,10 @@
 			"command": "time ${workspaceFolder}/a.out",
 			"dependsOn": ["build-debug"],
 			"problemMatcher": [],
-			/*"group": {
+			"group": {
 				"kind": "test",
-				"isDefault": false
-			},*/
+				"isDefault": true
+			},
 		},
 
 		//--- Build the debug binary.
@@ -30,7 +30,7 @@
 			"type": "shell",
 			"command": "gcc",
 			"args": [
-				"libft.c",
+				"test/libft.c",
 				"-g",
 				"-Wall",
 				"-Wextra",
