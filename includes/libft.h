@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 19:23:29 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2019/03/14 04:00:47 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/03/14 05:39:48 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,6 +15,7 @@
 # define _LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+
 /*
 **  Type Definitions
 */
@@ -118,27 +119,20 @@ typedef struct		s_list
 	void			*data;
 	struct s_list	*next;
 }					t_list;
-
 typedef	t_list		*t_lsti;
 typedef t_lsti		*t_lst;
-
-
 t_list				**ft_lstnew(size_t len, ...);
 void				ft_lstclr(t_list **lst, int flg);
-
 t_list				*ft_lstinew(const void *ptr, const t_list *nxt);
 t_list				*ft_lstadd(t_list **lst, const void *ptr);
 t_list				*ft_lstpush(t_list **lst, const void *ptr);
 void				*ft_lstpop(t_list **lst);
 void				*ft_lstshift(t_list **lst);
-t_list				**ft_lstsplit(t_list** lst, size_t i);
-t_list				**ft_lstsplice(t_list** lst, size_t i, size_t n);
-
+t_list				**ft_lstsplit(t_list **lst, size_t i);
+t_list				**ft_lstsplice(t_list **lst, size_t i, size_t n);
 t_list				*ft_lstlast(t_list **lst);
 size_t				ft_lstlen(t_list **lst);
-//t_list				*ft_lstset(t_list **lst, size_t idx, const void *ptr);
 void				*ft_lstget(t_list **lst, size_t idx);
-
 void				ft_lstiter(t_list **lst, void (*fnc)(void *dat));
 void				ft_lstiteri(t_list **lst, void (*fnc)(void *dat, size_t));
 t_list				**ft_lstmap(t_list **lst, void *(*fnc)(void *dat));
@@ -148,20 +142,16 @@ t_list				**ft_lstrev(t_list **lst);
 int					ft_lstacc(t_list **lst, int (*fnc)(void *dat));
 int					ft_lstfind(t_list **lst, int (*fnc)(void *dat));
 int					ft_lststr(t_list **lst, const char *str);
-
 char				*ft_lstcat(t_list **lst);
 char				*ft_lstjoin(t_list **lst, const char *sep);
 
-
-
-/*------------------*/
 /*
-
-
-size_t				*ft_lstidx(t_list **lst, t_list *lsti);
-t_list				*ft_lstset(t_list **lst, size_t idx, const void *ptr);
-void				*ft_lstget(t_list **lst, size_t idx);
-t_list				**ft_lstfltr(t_list **lst, int (*fnc)(t_list *lsti));
-
+** TODO: Lists
+**
+**
+** size_t			*ft_lstidx(t_list **lst, t_list *lsti);
+** t_list			*ft_lstset(t_list **lst, size_t idx, const void *ptr);
+** void				*ft_lstget(t_list **lst, size_t idx);
+** t_list			**ft_lstfltr(t_list **lst, int (*fnc)(t_list *lsti));
 */
 #endif
