@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/15 17:41:54 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/12/24 15:03:33 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/03/14 00:21:30 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,6 +20,8 @@ char		*ft_lstjoin(t_list **lst, const char *sep)
 	char	*src;
 	t_list	*cur;
 
+	if (!lst || !*lst)
+		return (NULL);
 	if (!sep || !*sep)
 		return (ft_lstcat(lst));
 	if (!(str = (char*)malloc((ft_lstacc(lst, (int(*)(void *data))ft_strlen) +
