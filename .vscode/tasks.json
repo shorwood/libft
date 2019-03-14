@@ -74,7 +74,8 @@
 			"type": "shell",
 			"command": "norminette",
 			"args": [
-				"src/*.c"
+				"src/*.c",
+				"includes/*.h"
 			],
 			"problemMatcher": {
 				"owner": "cpp",
