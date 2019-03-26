@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/15 17:57:57 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2019/03/14 05:34:12 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/03/21 04:02:40 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,21 +16,21 @@
 
 t_list	**ft_lstmap(t_list **lst, void *(*fnc)(void *data))
 {
+	t_list	*lsti;
 	t_list	**new;
 	t_list	*cur;
-	t_list	*map;
 
 	if (!lst || !*lst || !(new = ft_lstnew(0)))
 		return (NULL);
-	cur = *lst;
-	if (!cur || !(*new = ft_lstinew(fnc(cur->data), NULL)))
+	lsti = *lst;
+	if (!lsti || !(*new = ft_lstinew(fnc(lsti->data), NULL)))
 		return (new);
-	map = *new;
-	while ((cur = cur->next))
+	cur = *new;
+	while ((lsti = lsti->next))
 	{
-		if (!(map = ft_lstinew(fnc(cur->data), NULL)))
+		if (!(cur->next = ft_lstinew(fnc(lsti->data), NULL)))
 			break ;
-		map = map->next;
+		cur = cur->next;
 	}
 	return (new);
 }
