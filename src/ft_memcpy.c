@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/09 18:51:25 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/17 19:15:59 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/03/27 00:13:26 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,6 +19,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t len)
 
 	buf = dst;
 	while (len--)
-		*buf++ = *(uint8_t*)src++;
+		*(uint8_t*)buf++ = *(uint8_t*)src++;
 	return (dst);
 }

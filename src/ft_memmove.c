@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/09 18:51:25 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/17 19:14:22 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/03/27 00:12:13 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,7 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char *buf;
+	uint8_t *buf;
 
 	buf = dst;
 	if (dst < src)
