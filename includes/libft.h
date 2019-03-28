@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 19:23:29 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2019/03/14 05:39:48 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/03/27 01:18:06 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -89,6 +89,8 @@ char				*ft_strtrim(char const *str);
 size_t				ft_strcspn(const char *str, const char *spn);
 size_t				ft_strspn(const char *str, const char *spn);
 char				*ft_strsep(char **str, const char *sep);
+char				**ft_strperm(const char *str);
+char				*ft_arrcat(const char **arr);
 /*
 ** Standard Functions
 */
@@ -98,6 +100,7 @@ void				ft_memdel(void **ptr);
 ** Math Functions
 */
 int					ft_powi(int x, unsigned int n);
+unsigned long long	ft_factorial(unsigned int n);
 /*
 ** I/O Functions
 */
@@ -129,7 +132,7 @@ t_list				*ft_lstpush(t_list **lst, const void *ptr);
 void				*ft_lstpop(t_list **lst);
 void				*ft_lstshift(t_list **lst);
 t_list				**ft_lstsplit(t_list **lst, size_t i);
-t_list				**ft_lstsplice(t_list **lst, size_t i, size_t n);
+t_list				**ft_lstslice(t_list **lst, size_t i, size_t n);
 t_list				*ft_lstlast(t_list **lst);
 size_t				ft_lstlen(t_list **lst);
 void				*ft_lstget(t_list **lst, size_t idx);
