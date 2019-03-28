@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_lstsplice.c                                   .::    .:/ .      .::   */
+/*   ft_lstslice.c                                    .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/03/13 20:15:16 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2019/03/14 01:08:18 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/03/28 04:23:26 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	**ft_lstsplice(t_list **lst, size_t i, size_t n)
+t_list	**ft_lstslice(t_list **lst, size_t i, size_t n)
 {
 	t_list	*cur;
 	t_list	*prv;
