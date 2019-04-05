@@ -10,7 +10,7 @@
 !.vscode/*
 
 #--- Include project files.
-!includes
+!include
 !src
 !test
 !**/*.c
