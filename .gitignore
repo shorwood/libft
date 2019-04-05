@@ -1,4 +1,4 @@
-*
+/*
 
 #--- Include documentation and git files.
 !.gitignore
@@ -10,8 +10,8 @@
 !.vscode/*
 
 #--- Include project files.
-!include
-!src
-!test
+!include/
+!src/
+!test/
 !**/*.c
 !**/*.h

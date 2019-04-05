@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_arrcat.c                                      .::    .:/ .      .::   */
+/*   ft_astrcat.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/03/27 01:05:36 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2019/03/27 01:23:46 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/05 06:52:08 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
-char	*ft_arrcat(const char **arr)
+char	*ft_astrcat(const char **arr)
 {
 	size_t	len;
 	char	*str;
 	char	**buf;
+
 
 	buf = (char**)arr;
 	len = 0;
@@ -25,7 +28,6 @@ char	*ft_arrcat(const char **arr)
 		len += ft_strlen(*buf++) + 1;
 	str = ft_strnew(len);
 	str[len] = '\0';
-
 	buf = (char**)arr;
 	len = 0;
 	while (*buf)
@@ -34,7 +36,5 @@ char	*ft_arrcat(const char **arr)
 		len += ft_strcspn(str + len, "\0") + 1;
 		str[len - 1] = '\n';
 	}
-
-
 	return (str);
 }

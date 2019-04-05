@@ -6,14 +6,14 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/15 17:57:57 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/12/24 14:54:42 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/05 05:26:08 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_lststr(t_list **lst, const char *str)
+size_t	ft_lststr(t_list **lst, const char *str)
 {
 	t_list	*cur;
 	int		idx;
