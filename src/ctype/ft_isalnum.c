@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/10 05:58:53 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/30 01:38:09 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/05 07:53:48 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,5 +15,5 @@
 
 int	ft_isalnum(int c)
 {
-	return (ft_islower(c) || ft_isupper(c) || ft_isdigit(c));
+	return (ft_isalpha(c) || ft_isdigit(c));
 }
