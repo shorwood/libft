@@ -91,7 +91,7 @@ char		**ft_strprm(const char *str)
 	if (len == 3)
 		return (ft_strprm_3(str));
 
-	arr = (char**)malloc((ft_factorial(len) + 1) * sizeof(char*));
+	arr = (char**)malloc((ft_factillu(len) + 1) * sizeof(char*));
 
 	i = 0;
 	off = 0;
