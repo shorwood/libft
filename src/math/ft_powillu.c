@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_factorial.c                                   .::    .:/ .      .::   */
+/*   ft_powillu.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/03/26 22:29:58 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2019/03/26 22:34:57 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/09 21:23:47 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2019/04/05 10:51:06 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-unsigned long long	ft_factorial(unsigned int n)
+long long	ft_powill(long long x, unsigned int n)
 {
-	unsigned long long ret;
-	int i;
+	long long y;
 
-	i = n;
-	ret = 1;
-	while (i > 1)
-		ret *= i--;
-	return ret;
+	y = 1LL;
+	while (n--)
+		y *= x;
+	return (y);
 }

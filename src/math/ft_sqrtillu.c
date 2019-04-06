@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_powi.c                                        .::    .:/ .      .::   */
+/*   ft_sqrtillu.c                                    .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/09 21:23:47 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/17 18:55:12 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/07 07:34:21 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2019/04/05 13:58:47 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_powi(int x, unsigned int n)
+unsigned long long	ft_sqrtillu(unsigned long long n)
 {
-	int y;
+	unsigned long long x;
 
-	y = 1;
-	while (n--)
-		y *= x;
-	return (y);
+	x = 2;
+	while (x * x < n)
+		x++;
+	return (x);
 }
