@@ -6,37 +6,19 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 19:23:29 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2019/03/28 05:21:23 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/10 04:55:58 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #ifndef _LIBFT_H
 # define _LIBFT_H
-# include <stdlib.h>
-# include <unistd.h>
 
-/*
-**  Type Definitions
-*/
-/*
-** ASCII Character Type Functions
-*/
-int					ft_isalnum(int c);
-int					ft_isalpha(int c);
-int					ft_isascii(int c);
-int					ft_isblank(int c);
-int					ft_iscntrl(int c);
-int					ft_isdigit(int c);
-int					ft_isgraph(int c);
-int					ft_islower(int c);
-int					ft_isprint(int c);
-int					ft_ispunct(int c);
-int					ft_isspace(int c);
-int					ft_isupper(int c);
-int					ft_isxdigit(int c);
-int					ft_tolower(int c);
-int					ft_toupper(int c);
+# include <stdlib.h>
+# include "ft_ctype.h"
+# include "ft_string.h"
+# include "ft_math.h"
+# include "ft_list.h"
 /*
 ** Bit Manipulation Functions
 */
@@ -44,6 +26,10 @@ int					ft_bitread(uint8_t byte, int i);
 void				ft_bitset(uint8_t *ptr, int i);
 void				ft_bitclear(uint8_t *ptr, int i);
 void				ft_bitwrite(uint8_t *ptr, int i, int val);
+uint16_t			ft_bit16range(uint16_t val, unsigned int i, unsigned int n);
+uint16_t			ft_bit16clamp(uint16_t val, unsigned int i, unsigned int n);
+__uint128_t			ft_bit128range(__uint128_t val, unsigned int i, unsigned int n);
+__uint128_t			ft_bit128clamp(__uint128_t val, unsigned int i, unsigned int n);
 /*
 ** Strings Functions
 */
@@ -97,11 +83,6 @@ char				*ft_arrcat(const char **arr);
 char				*ft_itoa(int x);
 void				ft_memdel(void **ptr);
 /*
-** Math Functions
-*/
-int					ft_powi(int x, unsigned int n);
-unsigned long long	ft_factorial(unsigned int n);
-/*
 ** I/O Functions
 */
 void				ft_putchar(char c);
@@ -114,48 +95,5 @@ void				ft_putnbr(int x);
 void				ft_putnbr_fd(int x, int fd);
 void				ft_putbits(const void *ptr, size_t siz);
 void				ft_putnbits(const void *ptr, size_t siz, size_t n);
-/*
-** List Functions
-*/
-typedef struct		s_list
-{
-	void			*data;
-	struct s_list	*next;
-}					t_list;
-typedef	t_list		*t_lsti;
-typedef t_lsti		*t_lst;
-t_list				**ft_lstnew(size_t len, ...);
-void				ft_lstclr(t_list **lst, int flg);
-t_list				*ft_lstinew(const void *ptr, const t_list *nxt);
-t_list				*ft_lstadd(t_list **lst, const void *ptr);
-t_list				*ft_lstpush(t_list **lst, const void *ptr);
-void				*ft_lstpop(t_list **lst);
-void				*ft_lstshift(t_list **lst);
-t_list				**ft_lstsplit(t_list **lst, size_t i);
-t_list				**ft_lstslice(t_list **lst, size_t i, size_t n);
-t_list				*ft_lstlast(t_list **lst);
-size_t				ft_lstlen(t_list **lst);
-void				*ft_lstget(t_list **lst, size_t idx);
-void				ft_lstiter(t_list **lst, void (*fnc)(void *dat));
-void				ft_lstiteri(t_list **lst, void (*fnc)(void *dat, size_t));
-t_list				**ft_lstmap(t_list **lst, void *(*fnc)(void *dat));
-t_list				**ft_lstdup(t_list **lst);
-t_list				**ft_lstcpy(t_list **lst);
-t_list				**ft_lstrev(t_list **lst);
-int					ft_lstacc(t_list **lst, int (*fnc)(void *dat));
-size_t				ft_lstfind(t_list **lst, int (*fnc)(void *dat));
-size_t				ft_lststr(t_list **lst, const char *str);
-char				*ft_lstcat(t_list **lst);
-char				*ft_lstjoin(t_list **lst, const char *sep);
-t_list				**ft_lstprm(t_lst lst);
 
-/*
-** TODO: Lists
-**
-** t
-** size_t			*ft_lstidx(t_list **lst, t_list *lsti);
-** t_list			*ft_lstset(t_list **lst, size_t idx, const void *ptr);
-** void				*ft_lstget(t_list **lst, size_t idx);
-** t_list			**ft_lstfltr(t_list **lst, int (*fnc)(t_list *lsti));
-*/
 #endif
