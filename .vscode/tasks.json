@@ -35,7 +35,7 @@
 				"-Wall",
 				"-Wextra",
 				"-Werror",
-				"-I/Users/shorwood/LibFt/includes",
+				"-I/Users/shorwood/LibFt/include",
 				"-L/Users/shorwood/LibFt",
 				"-lft"
 			],
