@@ -6,7 +6,7 @@
 #    By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/07/16 12:26:44 by shorwood     #+#   ##    ##    #+#        #
-#    Updated: 2019/04/05 06:30:47 by shorwood    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/04/05 08:42:06 by shorwood    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -18,7 +18,7 @@ AR		= ar rus
 DSRC	= src
 DINC	= include
 DOBJ	= build
-DBIN	= lib
+DBIN	= .
 
 #--- Set source project dependencies.
 SRC	= $(wildcard $(DSRC)/**/*.c)
