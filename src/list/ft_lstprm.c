@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/03/26 22:27:00 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2019/03/28 05:11:42 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/17 09:35:34 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,54 +14,108 @@
 #include <stdlib.h>
 #include "libft.h"
 
-static t_lst	ft_lstprm_3(t_lst lst)
+static t_lst	ft_lstprm4(void *ptr0, void *ptr1, void *ptr2, void *ptr3)
 {
-	void *elm0;
-	void *elm1;
-	void *elm2;
-	
-	elm0 = (*lst)->data;
-	elm1 = (*lst)->next->data;
-	elm2 = (*lst)->next->next->data;
-	return (ft_lstnew(6, 
-		ft_lstcpy(lst),
-		ft_lstnew(3, elm0, elm2, elm1),
-		ft_lstnew(3, elm1, elm0, elm2),
-		ft_lstnew(3, elm1, elm2, elm0),
-		ft_lstnew(3, elm2, elm0, elm1),
-		ft_lstnew(3, elm2, elm1, elm0)));
+	return (ft_lstnew(24,
+		ft_lstnew(4, ptr0, ptr1, ptr2, ptr3),
+		ft_lstnew(4, ptr0, ptr1, ptr3, ptr2),
+		ft_lstnew(4, ptr0, ptr2, ptr1, ptr3),
+		ft_lstnew(4, ptr0, ptr2, ptr3, ptr1),
+		ft_lstnew(4, ptr0, ptr3, ptr1, ptr2),
+		ft_lstnew(4, ptr0, ptr3, ptr2, ptr1),
+		ft_lstnew(4, ptr1, ptr0, ptr2, ptr3),
+		ft_lstnew(4, ptr1, ptr0, ptr3, ptr2),
+		ft_lstnew(4, ptr1, ptr2, ptr0, ptr3),
+		ft_lstnew(4, ptr1, ptr2, ptr3, ptr0),
+		ft_lstnew(4, ptr1, ptr3, ptr0, ptr2),
+		ft_lstnew(4, ptr1, ptr3, ptr2, ptr0),
+		ft_lstnew(4, ptr2, ptr0, ptr1, ptr3),
+		ft_lstnew(4, ptr2, ptr0, ptr3, ptr1),
+		ft_lstnew(4, ptr2, ptr1, ptr0, ptr3),
+		ft_lstnew(4, ptr2, ptr1, ptr3, ptr0),
+		ft_lstnew(4, ptr2, ptr3, ptr0, ptr1),
+		ft_lstnew(4, ptr2, ptr3, ptr1, ptr0),
+		ft_lstnew(4, ptr3, ptr0, ptr1, ptr2),
+		ft_lstnew(4, ptr3, ptr0, ptr2, ptr1),
+		ft_lstnew(4, ptr3, ptr1, ptr0, ptr2),
+		ft_lstnew(4, ptr3, ptr1, ptr2, ptr0),
+		ft_lstnew(4, ptr3, ptr2, ptr0, ptr1),
+		ft_lstnew(4, ptr3, ptr2, ptr1, ptr0)));
 }
 
-/* ************************************************************************** */
+/*
+** *****************************************************************************
+*/
 
-t_lst		ft_lstprm(t_lst lst)
+static t_lst	ft_lstprm3(void *ptr0, void *ptr1, void *ptr2)
 {
-	t_lst 	arr;
-	t_lst	buf;
-	size_t	off;
-	size_t	len;
+	return (ft_lstnew(6,
+		ft_lstnew(3, ptr0, ptr1, ptr2),
+		ft_lstnew(3, ptr0, ptr2, ptr1),
+		ft_lstnew(3, ptr1, ptr0, ptr2),
+		ft_lstnew(3, ptr1, ptr2, ptr0),
+		ft_lstnew(3, ptr2, ptr0, ptr1),
+		ft_lstnew(3, ptr2, ptr1, ptr0)));
+}
 
-	if ((len = ft_lstlen(lst)) == 3)
-		return (ft_lstprm_3(lst));
-	if (len == 2)
-		return (ft_lstnew(2, ft_lstcpy(lst),
-				ft_lstnew(2, ft_lstget(lst, 1), ft_lstget(lst, 0))));
-	if (len == 1)
-		return (ft_lstcpy(lst));
+/*
+** *****************************************************************************
+*/
+
+static t_lst	ft_lstprm2(void *ptr0, void *ptr1)
+{
+	return (ft_lstnew(2,
+		ft_lstnew(2, ptr0, ptr1),
+		ft_lstnew(2, ptr1, ptr0)));
+}
+
+/*
+** *****************************************************************************
+*/
+
+static t_lst	ft_lstprmn(t_lst lst, int len)
+{
+	t_lst	arr;
+	t_lst	buf;
+	void	*elm;
+	t_lst	prm;
+	int		i;
+
+	i = 0;
 	arr = ft_lstnew(0);
-	off = 0;
-	while (off < len)
+	while (i < len)
 	{
 		buf = ft_lstcpy(lst);
-		t_lst elm = ft_lstslice(buf, off++, 1);
-		t_lst perm = ft_lstprm(buf);
-		t_lsti tmp = *perm;
-		while (tmp)
+		elm = ft_lstdel(buf, i++);
+		prm = ft_lstprm(buf);
+		while (*prm)
 		{
-			ft_lstadd(tmp->data, (*elm)->data);
-			ft_lstadd(arr, tmp->data);
-			tmp = tmp->next;
+			ft_lstadd((*prm)->data, elm);
+			ft_lstadd(arr, (*prm)->data);
+			*prm = (*prm)->next;
 		}
 	}
 	return (ft_lstrev(arr));
+}
+
+/*
+** *****************************************************************************
+*/
+
+t_lst			ft_lstprm(t_lst lst)
+{
+	int	len;
+
+	if ((len = ft_lstlen(lst)) == 4)
+		return (ft_lstprm4((*lst)->data, (*lst)->next->data,
+		(*lst)->next->next->data, (*lst)->next->next->next->data));
+	else if (len == 3)
+		return (ft_lstprm3((*lst)->data, (*lst)->next->data,
+		(*lst)->next->next->data));
+	else if (len == 2)
+		return (ft_lstprm2((*lst)->data, (*lst)->next->data));
+	else if (len == 1)
+		return (ft_lstcpy(lst));
+	else
+		return (ft_lstprmn(lst, len));
 }
