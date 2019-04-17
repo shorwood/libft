@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_lstshift.c                                    .::    .:/ .      .::   */
+/*   ft_lsttoa.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/15 17:57:57 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2019/04/10 05:34:52 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/04/15 06:51:01 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2019/04/15 07:05:19 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	*ft_lstshift(t_list **lst)
+void	**ft_lsttoa(t_list **lst)
 {
+	void	**arr;
+	void	**buf;
 	t_list	*lsti;
-	void	*ptr;
 
 	if (ft_lstnull(lst))
 		return (NULL);
-	lsti = ft_lstishift(lst);
-	ptr = lsti->data;
-	free(lsti);
-	return (ptr);
+	if (!(arr = (void**)malloc((ft_lstlen(lst) + 1) * sizeof(void*))))
+		return (NULL);
+	buf = arr;
+	lsti = *lst;
+	while (lsti)
+	{
+		*buf++ = lsti->data;
+		lsti = lsti->next;
+	}
+	buf = NULL;
+	return (arr);
 }

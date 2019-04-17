@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_lstshift.c                                    .::    .:/ .      .::   */
+/*   ft_lstiins.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/15 17:57:57 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2019/04/10 05:34:52 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/04/10 04:38:17 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2019/04/15 12:15:36 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	*ft_lstshift(t_list **lst)
+t_list	*ft_lstiins(t_list **lst, t_list *lsti, size_t i)
 {
-	t_list	*lsti;
-	void	*ptr;
+	t_list *prev;
 
-	if (ft_lstnull(lst))
+	if (!lst || !lsti)
 		return (NULL);
-	lsti = ft_lstishift(lst);
-	ptr = lsti->data;
-	free(lsti);
-	return (ptr);
+	if (i == 0)
+		return (ft_lstiadd(lst, lsti));
+	if (!(prev = ft_lstiget(lst, i - 1)))
+		return (NULL);
+	lsti->next = prev->next;
+	prev->next = lsti;
+	return (lsti);
 }

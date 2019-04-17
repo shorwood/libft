@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/03/13 20:15:16 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2019/03/28 04:23:26 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/10 08:18:13 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,9 +19,9 @@ t_list	**ft_lstslice(t_list **lst, size_t i, size_t n)
 	t_list	*prv;
 	t_list	**ret;
 
-	if (!lst || !*lst)
+	if (ft_lstnull(lst))
 		return (NULL);
-	if (!i)
+	if (i == 0)
 		return (ft_lstsplit(lst, n));
 	cur = *lst;
 	while (--i && cur->next)

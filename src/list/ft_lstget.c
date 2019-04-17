@@ -6,22 +6,19 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/03/14 03:55:33 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2019/03/14 03:57:45 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/10 06:29:27 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	*ft_lstget(t_list **lst, size_t idx)
+void	*ft_lstget(t_list **lst, size_t i)
 {
-	t_list *cur;
+	t_lsti lsti;
 
-	if (!lst || !*lst)
+	if (ft_lstnull(lst))
 		return (NULL);
-	cur = *lst;
-	while (idx-- && cur->next)
-		cur = cur->next;
-	return (cur->data);
+	lsti = ft_lstiget(lst, i);
+	return (lsti ? lsti->data : NULL);
 }

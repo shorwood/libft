@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/15 17:57:57 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/12/24 13:16:40 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/10 05:35:09 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,16 +16,13 @@
 
 void	*ft_lstpop(t_list **lst)
 {
-	t_list	*cur;
-	void	*dat;
+	t_list	*lsti;
+	void	*ptr;
 
-	if (!lst || !*lst)
+	if (ft_lstnull(lst))
 		return (NULL);
-	cur = *lst;
-	while (cur->next->next)
-		cur = cur->next;
-	dat = cur->next->data;
-	free(cur->next);
-	cur->next = NULL;
-	return (dat);
+	lsti = ft_lstipop(lst);
+	ptr = lsti->data;
+	free(lsti);
+	return (ptr);
 }

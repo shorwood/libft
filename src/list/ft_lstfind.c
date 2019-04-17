@@ -6,28 +6,28 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/15 17:57:57 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2019/03/28 04:34:40 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/10 06:11:48 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_lstfind(t_list **lst, int (*fnc)(void *dat))
+size_t	ft_lstfind(t_list **lst, int (*fnc)(void *ptr))
 {
 	t_list	*cur;
-	size_t	idx;
+	size_t	i;
 
 	if (!lst || !*lst)
 		return (-1);
-	idx = 0;
+	i = 0;
 	cur = *lst;
 	while (cur)
 	{
 		if (fnc(cur->data))
-			return (idx);
+			return (i);
 		cur = cur->next;
-		idx++;
+		i++;
 	}
 	return (-1);
 }

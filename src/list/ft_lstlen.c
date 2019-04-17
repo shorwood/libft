@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/12/21 02:20:25 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2018/12/24 10:47:50 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/10 05:05:15 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,7 +19,7 @@ size_t	ft_lstlen(t_list **lst)
 	t_list	*cur;
 	size_t	len;
 
-	if (!lst || !*lst)
+	if (ft_lstnull(lst))
 		return (0);
 	len = 1;
 	cur = *lst;
