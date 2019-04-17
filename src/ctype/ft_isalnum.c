@@ -6,14 +6,14 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/10 05:58:53 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2019/04/05 07:53:48 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/10 04:58:06 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+int		ft_isalnum(int c)
 {
 	return (ft_isalpha(c) || ft_isdigit(c));
 }
