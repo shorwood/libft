@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-static char	**ft_strprm_3(const char *str)
+static char	**ft_strprm3(const char *str)
 {
 	char **arr;
 
@@ -44,9 +44,11 @@ static char	**ft_strprm_3(const char *str)
 	return (arr);
 }
 
-/* ************************************************************************** */
+/*
+** *****************************************************************************
+*/
 
-static char	**ft_strprm_2(const char *str)
+static char	**ft_strprm2(const char *str)
 {
 	char **arr;
 
@@ -59,9 +61,11 @@ static char	**ft_strprm_2(const char *str)
 	return (arr);
 }
 
-/* ************************************************************************** */
+/*
+** *****************************************************************************
+*/
 
-static char	**ft_strprm_1(const char *str)
+static char	**ft_strprm1(const char *str)
 {
 	char **arr;
 
@@ -71,9 +75,9 @@ static char	**ft_strprm_1(const char *str)
 	return (arr);
 }
 
-
-
-/* ************************************************************************** */
+/*
+** *****************************************************************************
+*/
 
 char		**ft_strprm(const char *str)
 {
@@ -82,28 +86,26 @@ char		**ft_strprm(const char *str)
 	size_t	len;
 	size_t	off;
 	size_t	i;
+	char	c;
+	char	**perm;
+	char	**tmp;
 
-	len = ft_strlen(str);
-	if (len == 1)
-		return (ft_strprm_1(str));
+	if ((len = ft_strlen(str)) == 1)
+		return (ft_strprm1(str));
 	if (len == 2)
-		return (ft_strprm_2(str));
+		return (ft_strprm2(str));
 	if (len == 3)
-		return (ft_strprm_3(str));
-
+		return (ft_strprm3(str));
 	arr = (char**)malloc((ft_factillu(len) + 1) * sizeof(char*));
-
 	i = 0;
 	off = 0;
-	
 	while (off < len)
 	{
 		buf = ft_strdup(str);
-		char c = buf[off];
+		c = buf[off];
 		ft_memcpy(&buf[off], &buf[off + 1], len - off);
-
-		char **perm = ft_strprm(buf);
-		char **tmp = perm;
+		perm = ft_strprm(buf);
+		tmp = perm;
 		while (*tmp)
 		{
 			arr[i++] = ft_strjoin((char[2]){c, '\0'}, *tmp);
