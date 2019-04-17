@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_math.h                                        .::    .:/ .      .::   */
+/*   math.h                                           .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/04/05 09:55:56 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2019/04/05 11:13:05 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/17 06:05:59 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -43,5 +43,4 @@ unsigned long long	ft_sqrtillu(unsigned long long n);
 ** Computes the closest value of 'x' to the power of 'n'.
 */
 long long			ft_powill(long long x, unsigned int n);
-
 #endif
