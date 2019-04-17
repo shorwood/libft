@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/21 19:23:29 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2019/04/17 06:16:15 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/17 09:24:17 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -22,4 +22,5 @@
 # include "string.h"
 
 char				*ft_itoa(int x);
+char				*ft_astrcat(const char **arr);
 #endif

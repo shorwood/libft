@@ -6,21 +6,19 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/03/27 01:05:36 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2019/04/05 06:52:08 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/17 07:44:38 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-#include <string.h>
 
 char	*ft_astrcat(const char **arr)
 {
 	size_t	len;
 	char	*str;
 	char	**buf;
-
 
 	buf = (char**)arr;
 	len = 0;
