@@ -6,7 +6,7 @@
 #    By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/07/16 12:26:44 by shorwood     #+#   ##    ##    #+#        #
-#    Updated: 2019/04/17 07:32:34 by shorwood    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/04/17 10:25:32 by shorwood    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -29,6 +29,8 @@ OBJ = $(patsubst %.c,$(DOBJ)/%.o,$(SRC))
 
 # **************************************************************************** #
 
+all: $(BIN)
+
 #--- Default instruction to make the library.
 $(BIN): $(DBIN)/$(BIN).a $(DBIN)/$(BIN).h
 
@@ -47,7 +49,7 @@ $(DBIN)/$(BIN).a: $(OBJ)
 #--- Compile into an object binary. Depends on source code.
 $(DOBJ)/%.o: %.c
 	@mkdir -p $(dir $@)
-	@$(CC) $(CFLAGS) -I$(DINC) $< -o $@ -c
+	@$(CC) $(CFLAGS) $(LDFLAGS) -I$(DINC) $< -o $@ -c
 	@printf "\r\033[K• Compiled '$<'"
 
 # **************************************************************************** #
@@ -58,7 +60,9 @@ clean:
 	@printf "\r\033[K• Deleted object files"
 
 fclean: clean
-	@rm -f $(BIN)
+	@rm -f $(DBIN)/$(BIN).a
+	@rm -f $(DBIN)/$(BIN).h
+	@rm -r $(DBIN) 2> /dev/null || true
 	@printf "\r\033[K• Deleted build and object files"
 
 re: fclean all
