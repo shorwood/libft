@@ -6,17 +6,17 @@
 #    By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/07/16 12:26:44 by shorwood     #+#   ##    ##    #+#        #
-#    Updated: 2019/04/17 10:25:32 by shorwood    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/04/17 10:34:48 by shorwood    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
 
 #--- Initialize compilation/linkeage parameters.
-BIN		= libft
+NAME	= libft
 DSRC	= src
 DINC	= include
 DOBJ	= build
-DBIN	= bin
+DBIN	= .
 CFLAGS	= -Wall -Werror -Wextra
 LDFLAGS	= 
 
@@ -25,29 +25,29 @@ SRC	= $(wildcard $(DSRC)/*.c)\
 	  $(wildcard $(DSRC)/*/*.c)
 INC	= $(wildcard $(DINC)/*.h)\
 	  $(wildcard $(DINC)/*/*.h)
-OBJ = $(patsubst %.c,$(DOBJ)/%.o,$(SRC))
+OBJ = $(patsubst $(DSRC)/%.c,$(DOBJ)/%.o,$(SRC))
 
 # **************************************************************************** #
 
-all: $(BIN)
+all: $(NAME)
 
 #--- Default instruction to make the library.
-$(BIN): $(DBIN)/$(BIN).a $(DBIN)/$(BIN).h
+$(NAME): $(DBIN)/$(NAME).a $(DBIN)/$(NAME).h
 
 #--- Combine all header files into a single one.
-$(DBIN)/$(BIN).h: $(filter-out $(DINC)/$(BIN).h, $(INC))
-	@sed -e '/^# include \"/d;' $(DINC)/$(BIN).h >> $@
+$(DBIN)/$(NAME).h: $(filter-out $(DINC)/$(NAME).h, $(INC))
+	@sed -e '/^# include \"/d;' $(DINC)/$(NAME).h >> $@
 	@sed -e '/^# include/d;/^\/\* \*/d;/^\/\*   /d;' $^ >> $@
 	@echo "\r\033[K• Header '$(notdir $@)' generated"
 
 #--- Assemble into a static library. Depends on compiled object binary.
-$(DBIN)/$(BIN).a: $(OBJ)
+$(DBIN)/$(NAME).a: $(OBJ)
 	@mkdir -p $(dir $@)
 	@ar rus $@ $? 2> /dev/null
 	@echo "\r\033[K• Library '$(notdir $@)' compiled"
  
 #--- Compile into an object binary. Depends on source code.
-$(DOBJ)/%.o: %.c
+$(DOBJ)/%.o: $(DSRC)/%.c
 	@mkdir -p $(dir $@)
 	@$(CC) $(CFLAGS) $(LDFLAGS) -I$(DINC) $< -o $@ -c
 	@printf "\r\033[K• Compiled '$<'"
@@ -60,12 +60,11 @@ clean:
 	@printf "\r\033[K• Deleted object files"
 
 fclean: clean
-	@rm -f $(DBIN)/$(BIN).a
-	@rm -f $(DBIN)/$(BIN).h
+	@rm -f $(DBIN)/$(NAME).a
+	@rm -f $(DBIN)/$(NAME).h
 	@rm -r $(DBIN) 2> /dev/null || true
 	@printf "\r\033[K• Deleted build and object files"
 
 re: fclean all
-	@make
 
 .PHONY: clean fclean all re
