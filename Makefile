@@ -6,19 +6,19 @@
 #    By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/07/16 12:26:44 by shorwood     #+#   ##    ##    #+#        #
-#    Updated: 2019/04/17 06:24:13 by shorwood    ###    #+. /#+    ###.fr      #
+#    Updated: 2019/04/17 07:32:34 by shorwood    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
 
 #--- Initialize compilation/linkeage parameters.
 BIN		= libft
-CFLAGS	= -Wall -Werror -Wextra
-LDFLAGS	= 
 DSRC	= src
 DINC	= include
 DOBJ	= build
 DBIN	= bin
+CFLAGS	= -Wall -Werror -Wextra
+LDFLAGS	= 
 
 #--- Set source project dependencies.
 SRC	= $(wildcard $(DSRC)/*.c)\
@@ -32,6 +32,7 @@ OBJ = $(patsubst %.c,$(DOBJ)/%.o,$(SRC))
 #--- Default instruction to make the library.
 $(BIN): $(DBIN)/$(BIN).a $(DBIN)/$(BIN).h
 
+#--- Combine all header files into a single one.
 $(DBIN)/$(BIN).h: $(filter-out $(DINC)/$(BIN).h, $(INC))
 	@sed -e '/^# include \"/d;' $(DINC)/$(BIN).h >> $@
 	@sed -e '/^# include/d;/^\/\* \*/d;/^\/\*   /d;' $^ >> $@
