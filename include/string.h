@@ -6,13 +6,14 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/04/05 08:52:38 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2019/04/17 06:14:30 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/18 15:23:44 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #ifndef FT_STRING_H
 # define FT_STRING_H
+# include <stdlib.h>
 
 /*
 ** Converts the 'str' string to lowercase.
