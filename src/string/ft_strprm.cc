@@ -79,7 +79,7 @@ static char	**ft_strprm1(const char *str)
 ** *****************************************************************************
 */
 
-char		**ft_strprm(const char *str)
+char		**ft_strprm(const char *str) //TODO norminetteize this function
 {
 	char 	**arr;
 	char	*buf;

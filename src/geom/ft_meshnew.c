@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   int2.h                                           .::    .:/ .      .::   */
+/*   ft_meshnew.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/04/17 15:47:30 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2019/04/17 16:28:52 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/04/30 02:59:34 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2019/04/30 13:36:41 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#ifndef _LIBFT_INT2_H
-# define _LIBFT_INT2_H
+#include <stdlib.h>
+#include <stdarg.h>
+#include "libft.h"
 
-typedef struct		s_int2
+t_mesh	*ft_meshnew(size_t n, ...)
 {
-	int				x;
-	int				y;
-}					t_int2;
+	va_list	args;
+	t_mesh	*new;
 
-#endif
+	new = (t_mesh*)malloc(sizeof(t_mesh));
+	va_start(args, n);
+	new->tris = ft_vlstnew(n, args);
+	va_end(args);
+	return (new);
+}

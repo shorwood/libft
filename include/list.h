@@ -6,7 +6,7 @@
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/04/06 14:48:01 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2019/04/17 06:17:11 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/04/30 10:16:49 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,6 +14,7 @@
 #ifndef _LIBFT_LIST_H
 # define _LIBFT_LIST_H
 # include <stdlib.h>
+# include <stdarg.h>
 
 typedef struct		s_list
 {
@@ -65,6 +66,7 @@ void				*ft_lstdel(t_list **lst, size_t i);
 t_list				*ft_lstins(t_list **lst, void *ptr, size_t i);
 t_list				*ft_lstiins(t_list **lst, t_list *lsti, size_t i);
 void				**ft_lsttoa(t_list **lst);
+t_list				**ft_vlstnew(size_t len, va_list args);
 /*
 ** TODO: Lists
 **

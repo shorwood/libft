@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   libft.h                                          .::    .:/ .      .::   */
+/*   ft_vec3dnorm.c                                   .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: shorwood <shorwood@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/21 19:23:29 by shorwood     #+#   ##    ##    #+#       */
-/*   Updated: 2019/04/30 14:59:56 by shorwood    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/04/30 02:59:34 by shorwood     #+#   ##    ##    #+#       */
+/*   Updated: 2019/04/30 15:13:05 by shorwood    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#ifndef _LIBFT_H
-# define _LIBFT_H
-# include <stdlib.h>
-# include "binary.h"
-# include "geom.h"
-# include "ctype.h"
-# include "io.h"
-# include "list.h"
-# include "ft_math.h"
-# include "string.h"
+#include <math.h>
+#include "libft.h"
 
-char				*ft_itoa(int x);
-char				*ft_astrcat(const char **arr);
-#endif
+t_vec3d		ft_vec3dnorm(t_vec3d v)
+{
+	float len;
+
+	len = ft_vec3dlen(v);
+	return ((t_vec3d){.x = v.x / len, .y = v.y / len, .z = v.z / len});
+}
