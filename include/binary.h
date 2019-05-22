@@ -14,6 +14,7 @@
 #ifndef _LIBFT_BINARY_H
 # define _LIBFT_BINARY_H
 # include <stdlib.h>
+# include <stdint.h>
 
 typedef struct		s_byte
 {
