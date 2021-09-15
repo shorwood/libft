@@ -1,4 +1,4 @@
-# libft
+# Libft
 Ce projet a pour but de vous faire coder en C une bibliothèque de fonctionsusuelles que vous pourrez utiliser dans tous vos projets
 
 ## Préambule
